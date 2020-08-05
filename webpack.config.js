@@ -122,7 +122,15 @@ function webpackConfig(env = {}) {
     resolve: {
       extensions: [".js"],
       modules: ["node_modules"],
-      symlinks: false,
+      symlinks: true,
+      alias: {
+        // ensure that a shared React instance is used
+        // this is necessary, if package.json references scrivito via "file:"
+        // compare:
+        // https://medium.com/@penx/managing-dependencies-in-a-node-package-so-that-they-are-compatible-with-npm-link-61befa5aaca7
+        react: path.resolve("./node_modules/react"),
+        "react-dom": path.resolve("./node_modules/react-dom"),
+      },
     },
     devServer: {
       port: 8080,
@@ -237,6 +245,11 @@ function devServerCspHeader() {
 
   // allow ws: for webpack hot code reloading
   directives["default-src"].push("ws:");
+
+  // Add custom rules for onDevSdk
+  directives["default-src"].push("http:");
+  directives["script-src"].push("http:");
+  directives["style-src"].push("http:");
 
   return builder({ directives });
 }
