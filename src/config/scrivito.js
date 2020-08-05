@@ -6,6 +6,7 @@ export function configureScrivito(options) {
     optimizedWidgetLoading: true,
     strictSearchOperators: true,
     tenant: process.env.SCRIVITO_TENANT,
+    unstable: { assetUrlBase: "http://localhost:8091" },
   };
 
   if (process.env.SCRIVITO_ORIGIN) {
