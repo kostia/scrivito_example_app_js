@@ -29,12 +29,27 @@ const config = {
       .filter((result) => result)[0],
 };
 
-if (process.env.SCRIVITO_ORIGIN) {
-  config.origin = process.env.SCRIVITO_ORIGIN;
-}
+Scrivito.configure({
+  ...config,
 
-if (process.env.SCRIVITO_ENDPOINT) {
-  config.endpoint = process.env.SCRIVITO_ENDPOINT;
-}
+  unstable: {
+    getSiteIdForObj: () => "intranet",
+    assetUrlBase: "http://localhost:8091",
+    trustedUiOrigins: [
+      "https://scrivito-ui-dev.netlify.com",
+      "http://localhost:8090",
+      "http://127.0.0.1:8090",
+    ],
+  },
 
-Scrivito.configure(config);
+  baseUrlForSite: (siteId) => baseUrls[siteId],
+
+  siteForUrl: (url) =>
+    Object.keys(baseUrls)
+      .map((siteId) =>
+        url.startsWith(baseUrls[siteId])
+          ? { siteId, baseUrl: baseUrls[siteId] }
+          : undefined
+      )
+      .filter((result) => result)[0],
+});
