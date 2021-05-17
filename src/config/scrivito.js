@@ -2,12 +2,19 @@ import * as Scrivito from "scrivito";
 
 export function configureScrivito(options) {
   const config = {
-    adoptUi: true,
+    adoptUi: "http://localhost:8090",
     optimizedWidgetLoading: true,
     strictSearchOperators: true,
     contentTagsForEmptyAttributes: false,
     tenant: process.env.SCRIVITO_TENANT,
-    unstable: { assetUrlBase: "http://localhost:8091" },
+    unstable: {
+      assetUrlBase: "http://localhost:8091",
+      trustedUiOrigins: [
+        "http://localhost:8090",
+        "http://127.0.0.1:8090",
+        "https://*.netlify.app",
+      ],
+    },
   };
 
   if (process.env.SCRIVITO_ORIGIN) config.origin = process.env.SCRIVITO_ORIGIN;
