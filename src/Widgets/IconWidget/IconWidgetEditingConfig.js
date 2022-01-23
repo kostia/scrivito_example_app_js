@@ -1,5 +1,12 @@
+import * as React from "react";
 import * as Scrivito from "scrivito";
 import iconWidgetIcon from "../../assets/images/icon_widget.svg";
+
+class MyTestComponent extends React.Component {
+  render() {
+    return <>This is a test</>;
+  }
+}
 
 Scrivito.provideEditingConfig("IconWidget", {
   title: "Icon",
@@ -34,7 +41,7 @@ Scrivito.provideEditingConfig("IconWidget", {
   propertiesGroups: [
     {
       title: "Icon",
-      component: "IconEditorTab",
+      component: MyTestComponent,
       key: "icon-group",
     },
     {
