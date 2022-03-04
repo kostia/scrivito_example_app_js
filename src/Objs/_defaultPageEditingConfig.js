@@ -1,3 +1,5 @@
+import * as Scrivito from "scrivito";
+
 import HeadlineWidget from "../Widgets/HeadlineWidget/HeadlineWidgetClass";
 import SectionWidget from "../Widgets/SectionWidget/SectionWidgetClass";
 
@@ -46,11 +48,19 @@ export function defaultPageProperties(obj) {
   ];
 }
 
+window.validationCount ||= 0;
+
 export const defaultPageValidations = [
   [
     "title",
 
     (title) => {
+      window.validationCount += 1;
+
+      console.log("validation count", validationCount);
+
+      Scrivito.Obj.where("title", "equals", title).take();
+
       if (title.length === 0) {
         return {
           message: "The title should be set.",
