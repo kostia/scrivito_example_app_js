@@ -4,6 +4,7 @@ import metadataAttributes from "../_metadataAttributes";
 
 const Homepage = Scrivito.provideObjClass("Homepage", {
   attributes: {
+    myWidget: 'widget',
     ...defaultPageAttributes,
     showAsLandingPage: "boolean",
     cookieConsentLink: "link",
