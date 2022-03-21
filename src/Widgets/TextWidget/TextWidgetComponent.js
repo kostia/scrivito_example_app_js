@@ -12,7 +12,7 @@ Scrivito.provideComponent("TextWidget", ({ widget }) => {
       tag="div"
       className={classNames.join(" ")}
       content={widget}
-      attribute="text"
+      attribute="myWidget"
     />
   );
 });
