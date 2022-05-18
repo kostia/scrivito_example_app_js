@@ -3,8 +3,9 @@ import * as Scrivito from "scrivito";
 import { kebabCase } from "lodash-es";
 import "./HeadlineWidget.scss";
 import { alignmentClassName } from "../../utils/alignmentClassName";
+import HeadlineWidget from "./HeadlineWidgetClass";
 
-Scrivito.provideComponent("HeadlineWidget", ({ widget }) => {
+Scrivito.provideComponent(HeadlineWidget, ({ widget }) => {
   const style = widget.get("style") || "h2";
   const level = widget.get("level") || style;
   const classNames = ["headline-widget", style];
