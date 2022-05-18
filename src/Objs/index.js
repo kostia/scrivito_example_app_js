@@ -3,4 +3,4 @@ function importAll(r) {
 }
 
 // import all *ObjClass.js and *Component.js files under src/Objs/
-importAll(require.context("./", true, /(ObjClass|Component)\.js$/));
+importAll(require.context("./", true, /(ObjClass|Component)\.[jt]sx?$/));

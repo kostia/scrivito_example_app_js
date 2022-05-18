@@ -3,4 +3,4 @@ function importAll(r) {
 }
 
 // import all *EditingConfig.js files under src/Objs/
-importAll(require.context("./", true, /EditingConfig\.js$/));
+importAll(require.context("./", true, /EditingConfig\.[jt]sx?$/));

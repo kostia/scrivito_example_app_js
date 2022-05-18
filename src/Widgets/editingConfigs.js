@@ -3,4 +3,4 @@ function importAll(r) {
 }
 
 // import all *WidgetEditingConfig.js files under src/Widgets/
-importAll(require.context("./", true, /WidgetEditingConfig\.js$/));
+importAll(require.context("./", true, /WidgetEditingConfig\.[jt]sx?$/));
