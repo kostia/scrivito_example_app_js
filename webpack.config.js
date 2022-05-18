@@ -55,37 +55,9 @@ function webpackConfig(env = {}) {
     module: {
       rules: [
         {
-          test: /\.js$/,
+          test: /\.[jt]sx?$/,
           include: [path.join(__dirname, "src")],
-          use: [
-            {
-              loader: "babel-loader",
-              options: {
-                presets: [
-                  "@babel/preset-react",
-                  [
-                    "@babel/preset-env",
-                    {
-                      debug: false,
-                      modules: false,
-                      shippedProposals: true,
-                      useBuiltIns: "usage",
-                      corejs: "3",
-                      targets: { browsers: ["defaults", "not IE > 0"] },
-                      include: [
-                        // "transform-classes" is needed for node in combination with spread
-                        // arguments (see [1]). Otherwise prerendering will fail.
-                        //
-                        // [1] https://babeljs.io/docs/en/babel-preset-env/#include
-                        "transform-classes",
-                      ],
-                    },
-                  ],
-                ],
-                cacheDirectory: "tmp/babel-cache",
-              },
-            },
-          ],
+          use: { loader: "ts-loader" },
         },
         {
           test: /\.s?css$/,
@@ -156,7 +128,7 @@ function webpackConfig(env = {}) {
       new WebpackManifestPlugin({ fileName: "asset-manifest.json" }),
     ],
     resolve: {
-      extensions: [".js"],
+      extensions: [".tsx", ".ts", ".js"],
       modules: ["node_modules"],
       symlinks: false,
       fallback: { crypto: false },
