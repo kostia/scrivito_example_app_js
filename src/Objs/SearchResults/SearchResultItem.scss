@@ -1,10 +1,7 @@
-@import "src/assets/stylesheets/variables";
-
 .search-result-item {
   margin: 20px 0;
   padding-bottom: 20px;
   overflow: hidden;
-  border-bottom: 1px solid $theme-greylight;
 
   &--image {
     display: table-cell;
@@ -35,24 +32,5 @@
     display: table-cell;
     vertical-align: middle;
     min-width: 100px;
-  }
-}
-
-@media (max-width: $screen-xs-max) {
-  .search-result-item {
-    &--image,
-    &--content,
-    &--options {
-      display: block;
-      width: 100%;
-      padding: 0;
-    }
-
-    &--image {
-      &,
-      img {
-        width: 100%;
-      }
-    }
   }
 }
