@@ -1,0 +1,196 @@
+// -- Neoletter UI main file -- //
+
+ /* bs5 imports - parts (used parts depends on project)
+ ================================================== */
+
+ @import "bs5/bootstrap_parts";
+
+ /* bs5 variables
+ ================================================== */
+
+ .container, 
+ .container-fluid, 
+ .container-xxl, 
+ .container-xl, 
+ .container-lg, 
+ .container-md, 
+ .container-sm {
+  padding-right: var(--bs-gutter-x, 15px);
+  padding-left: var(--bs-gutter-x, 15px);
+ }
+ .row {
+  --bs-gutter-x: 15px;
+  --bs-gutter-y: 15px;
+ }
+ /* bs3 variables
+ ================================================== */
+
+ $screen-xs-max: 767px;
+ $screen-sm-min: 768px;
+ $screen-sm-max: 991px;
+ $screen-md-min: 992px;
+ $screen-md-max: 1199px;
+ $screen-lg-min: 1200px;
+ 
+ /* jr parts imports
+ ================================================== */
+
+ @import "jr-parts/jr-colors";
+ @import "jr-parts/jr-fonts";
+ @import "jr-parts/jr-icons";
+ @import "jr-parts/jr-print";
+ @import "jr-parts/jr-mixins";
+
+ @import "jr-parts/jr-main-ui";
+
+ @import "jr-parts/jr-errors";
+ @import "jr-parts/jr-toasts";
+ @import "jr-parts/jr-badge";
+ @import "jr-parts/jr-breadcrumb";
+ @import "jr-parts/jr-buttons";
+ @import "jr-parts/jr-tabs";
+
+ @import "jr-parts/jr-cards";
+ @import "jr-parts/jr-dropdown";
+ @import "jr-parts/jr-modals";
+ @import "jr-parts/jr-tooltip";
+ @import "jr-parts/jr-forms";
+ @import "jr-parts/jr-table";
+
+ @import "jr-parts/jr-list-flex";
+ @import "jr-parts/jr-list-select";
+ @import "jr-parts/jr-list-search";
+
+ /* general styles + helper classes
+ =================================================================== */
+ 
+ html {
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-overflow-scrolling: touch;
+ }
+ 
+ body {
+   font-family: "Manrope", sans-serif;
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 1.5em;
+   margin: 0;
+   color: $jr-darkgrey;
+   background: $jr-lightgrey;
+ }
+ 
+ h1, .h1 { font-size: 32px; }
+ h2, .h2 { font-size: 26px; }
+ h3, .h3 { font-size: 22px; }
+ h4, .h4 { font-size: 18px; }
+ h5, .h5 { font-size: 16px; }
+ h6, .h6 { font-size: 14px; }
+
+ h1, .h1,
+ h3, .h3,
+ h4, .h4,
+ h5, .h5,
+ h6, .h6 { font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.7rem; }
+
+
+.header-pretitle {
+  font-size: 10px; font-weight: 800;
+  margin: 0 0 2px 0;
+  color: $jr-middlegrey;
+  letter-spacing:  1px;
+  text-transform: uppercase; 
+}
+.headline-divider {
+  color: $jr-darkgrey;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  position: relative;
+  opacity: 0.5; overflow: hidden;
+  margin: 5px 0;
+}
+.headline-divider:after {
+  content:'';
+  display: inline-block;
+  height: 2px; width: 100%;
+  position: absolute; top: 49%;
+  background: #e3e3e3;
+}
+
+
+p { margin: 0 0 1em 0;}
+ 
+.text-muted { color: $jr-darkgrey; opacity:0.5; }
+
+.text-intro { font-size: 18px; line-height: 1.5em; }
+.text-small { font-size: 12px; line-height: 16px; font-weight: 600;}
+.text-meta { color: $jr-darkgrey; opacity:0.5; font-weight: 600; }
+
+.text-green { color: $jr-green;}
+.text-yellow { color: $jr-yellow;}
+.text-orange { color: $jr-orange;}
+.text-red { color: $jr-red;}
+
+.text-darkgrey { color: $jr-darkgrey;}
+.text-middlegrey { color: $jr-middlegrey;}
+.text-lightgrey { color: $jr-lightgrey;}
+
+.border-top-green { border-top: 5px solid $jr-green!important;}
+.border-top-yellow { border-top: 5px solid $jr-yellow!important;}
+.border-top-orange { border-top: 5px solid $jr-orange!important;}
+.border-top-red { border-top: 5px solid $jr-red!important;}
+
+.border-top-darkgrey { border-top: 5px solid $jr-darkgrey!important;}
+.border-top-middlegrey { border-top: 5px solid $jr-middlegrey!important;}
+.border-top-lightgrey { border-top: 5px solid $jr-lightgrey!important;}
+
+a {
+  color: $jr-darkgrey;
+  text-decoration: none;
+}
+a:hover,
+a:active,
+a:focus,
+a:visited {
+  color: $jr-darkgrey;
+  text-decoration: none;
+  outline: none !important;
+}
+button:focus {
+  outline: none !important;
+}
+
+::selection {
+  color: #222;
+  background: rgba(227,194,13,0.4);
+}
+::-moz-selection {
+  color: #222;
+  background: rgba(227,194,13,0.4);}
+
+.text-clamp {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+} 
+
+ /* RESPONSIVE
+ ================================================== */
+ 
+ @media (min-width: $screen-lg-min) {
+   .container { max-width: 90%; }
+ }
+ 
+ @media (max-width: $screen-md-max) {
+ }
+ 
+ @media (max-width: $screen-sm-max) {
+ }
+ 
+ @media (max-width: $screen-xs-max) {  
+ }
+ 

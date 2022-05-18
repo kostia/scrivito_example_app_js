@@ -1,0 +1,1024 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Team Detail</title>
+    <!-- CSS -->
+    <link href="../src/assets/css/index.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../src/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../src/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../src/assets/images/favicon.ico">
+
+    <!-- Bootstrap JS for prototyping --> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- jQuery for prototyping -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+    </script>
+
+  </head>
+  <body>
+
+    <div class="jr-wrapper">
+
+
+    <!-- JR TOPBAR START -->
+    <div class="jr-topbar">
+
+
+      <div class="jr-buttonbar jr-sidebar-toggle" onClick="$(this).toggleClass('open');$('body').toggleClass('jr-sidebar-left-show');">
+        <span class="lines"></span> 
+      </div>
+
+      <div class="jr-buttonbar jr-app-switcher" onClick="$('#test-dropdown-app-switcher').toggleClass('show');$(this).toggleClass('open');">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="jr-buttonbar jr-brand-settings"></div>
+
+      <div class="jr-buttonbar jr-user ms-auto" onClick="$(this).children('.dropdown-menu').toggleClass('show');">
+        <i class="jr-icon jr-icon-user"></i>
+        <span class="label user-name">Alexander Geßler
+          <span class="user-meta">alexander.gessler@justrelate.com</span>
+        </span>
+        <div class="dropdown-menu dropdown-menu-end">
+          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-paperplane"></i><span class="label">Make it fly</span></a>
+          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+        </div>
+      </div>
+
+
+
+
+    </div>
+    <!-- JR TOPBAR END -->
+
+    <!-- JR MAIN STAGE START -->
+    <div class="jr-main-wrapper">
+      <!-- JR SIDEBAR LEFT START -->
+      <div class="jr-sidebar-left">
+
+        <a href="index.html" class="jr-buttonbar" data-tooltip="Dashbaord" data-flow="right">
+          <i class="jr-icon jr-icon-dashboard"></i>
+          <span class="label">Dashboard</span>
+        </a>
+
+        <a href="#" class="jr-buttonbar" data-tooltip="Products - Setup different tenants for different products" data-flow="right">
+          <i class="jr-icon jr-icon-browsers"></i>
+          <span class="label">Products</span>
+        </a>
+        <a href="teams-overview.html" class="jr-buttonbar active" data-tooltip="Teams - Configure Permission Roles" data-flow="right">
+          <i class="jr-icon jr-icon-team"></i>
+          <span class="label">Teams</span>
+        </a>
+        <a href="users-overview.html" class="jr-buttonbar" data-tooltip="Users -  Permissions by Users" data-flow="right">
+          <i class="jr-icon jr-icon-contacts"></i>
+          <span class="label">Users</span>
+        </a>
+        <a href="#" class="jr-buttonbar" data-tooltip="Billing - Access all you financial an contract relevant data" data-flow="right">
+          <i class="jr-icon jr-icon-billing"></i>
+          <span class="label">Billing</span>
+        </a>
+        <a href="#" class="jr-buttonbar" data-tooltip="Account - Configure meta settings for all tenants" data-flow="right">
+          <i class="jr-icon jr-icon-account"></i>
+          <span class="label">Account</span>
+        </a>
+        
+        
+
+      </div>
+      <!-- JR SIDEBAR LEFT END -->
+
+
+      <!-- JR MAIN START -->
+      <main>
+        <div class="container-xxl">
+
+          <nav aria-label="breadcrumb" class="mb-3">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+              <li class="breadcrumb-item"><a href="teams-overview.html">Teams Overview</a></li>
+              <li class="breadcrumb-item active" aria-current="page"><span title="Chief Editors - scrivito.com / scrivito.de / justrelate.com / Neoletter - JustRelate">Chief Editors - scrivito.com / scrivito.de / justrelate.com / Neoletter - JustRelate</span></li>
+            </ol>
+          </nav>
+
+          <div class="header-pretitle">Team Details</div>
+          <h4 class="mb-3">Chief Editors - scrivito.com / scrivito.de / justrelate.com / Neoletter - JustRelate</h4>
+
+        
+          
+
+          <nav>
+            <div class="nav nav-tabs">
+              <div class="nav-link active" data-bs-toggle="tab" data-bs-target="#team-permissions">Details & Permissions</div>
+              <div class="nav-link" data-bs-toggle="tab" data-bs-target="#team-members">Members</div>
+            </div>
+          </nav>
+          <div class="card tab-content">
+            <div class="card-body tab-pane fade show active" id="team-permissions">
+              
+              <form class="row">
+                <div class="col-md-8">
+                  <label for="team-title" class="form-label">
+                    <span>Title of Team</span>
+                    <i class="jr-icon jr-icon-question text-orange" title="Some more infos here"></i>
+                  </label>
+                  <div class="input-group input-group-btn-inside">
+                    <input type="text" class="form-control form-control-readonly" id="team-title" 
+                    placeholder="Title.." value="Chief Editors - scrivito.com / scrivito.de / justrelate.com / Neoletter - JustRelate" disabled="">
+                    <button class="btn btn-addon" type="button"><i class="jr-icon jr-icon-pen text-orange"></i></button>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <label for="team-description" class="form-label">
+                    <span>Description of Team</span>
+                    <i class="jr-icon jr-icon-question text-orange" title="Some more infos here"></i>
+                  </label>
+                  <div class="input-group input-group-btn-inside">
+                    <textarea type="text" class="form-control form-control-readonly" id="team-description" 
+                    placeholder="" disabled="">Description of this Team with much more content and context is possible.
+                    </textarea>
+                    <button class="btn btn-addon" type="button"><i class="jr-icon jr-icon-pen text-orange"></i></button>
+                  </div>
+                </div>
+              </form>
+
+              <div class="row mt-0">
+                <div class="col-md-6">
+                  <div class="btn-confirm-group justify-content-start">
+                    <div class="btn btn-sm btn-outline-danger btn-confirm-trigger" onClick="$(this).hide();$(this).next('.btn-confirm-answer').show();">Delete Team</div>
+                    <div class="btn-confirm-answer" style="display: none;">
+                      <div class="btn btn-sm btn-danger" onClick="$(this).closest('.jr-accordion-item').hide();">Confirm Delete</div>
+                      <div class="btn btn-sm" onClick="$(this).parent().hide();$(this).parent().prev('.btn-confirm-trigger').show();">Cancel</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-end">
+                  <div class="btn btn-sm btn-danger"">Save</div>
+                  <div class="btn btn-sm"">Cancel</div>
+                </div>
+            
+              </div>
+
+
+              <hr>
+
+              <h4 class="mb-1">Instances list + permissions</h4>
+
+              <div class="form-label mb-3">
+                <span>Choose Instance for instance access + permissions set in unfold state</span>
+                <i class="jr-icon jr-icon-question text-orange" title="Some more infos here"></i>
+              </div>
+              
+
+              <!-- jr-accordion-wrapper:start -->
+              <div class="jr-list-flex jr-accordion-wrapper">
+
+                
+                <!-- jr-accordion-item:start -->
+                <div class="jr-accordion-item">
+                  <!-- jr-accordion-header:start -->
+                  <div class="jr-list-item jr-accordion-header">
+                    <div class="jr-list-group shrink">
+                      <div class="jr-icon-combined visible">
+                        <i class="jr-icon jr-icon-browsers-big text-orange"></i>
+                        <i class="jr-icon"></i>
+                      </div>
+                    </div>
+                    <div class="jr-list-group grow">
+                      <div class="h6 mb-0">Scrivito - www.scrivito.com</div>
+                      <div class="text-small text-meta mb-0">Description of this Instance with much more content and context is possible.</div>
+                    </div>
+                    <div class="jr-list-group shrink">
+                      <div class="btn-confirm-group">
+                        <div class="btn btn-sm btn-outline-danger btn-confirm-trigger" onClick="$(this).hide();$(this).next('.btn-confirm-answer').show();">Remove Access</div>
+                        <div class="btn-confirm-answer" style="display: none;">
+                          <div class="btn btn-sm btn-danger" onClick="$(this).closest('.jr-accordion-item').find('.jr-icon-combined').toggleClass('visible hidden');$(this).parent().hide();$(this).parent().prev('.btn-confirm-trigger').show();">Confirm Remove</div>
+                          <div class="btn btn-sm" onClick="$(this).parent().hide();$(this).parent().prev('.btn-confirm-trigger').show();">Cancel</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="jr-list-group shrink">
+                      <div class="btn-accordion" onClick="$(this).closest('.jr-accordion-item').toggleClass('open');"><i class="jr-icon jr-icon-chevron-down"></i></div>
+                    </div>
+                  </div>
+                  <!-- jr-accordion-header:end -->
+                  <!-- jr-accordion-body:start-->
+                  <div class="jr-accordion-body">
+                    <div class="jr-accordion-body-content">
+                      <div class="form-label mb-2">
+                        <span>Permissions</span>
+                        <i class="jr-icon jr-icon-question text-orange" title="Some more infos here"></i>
+                      </div>
+                      <div class="jr-list-select">
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox" checked disabled>
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Instance Access</div>
+                            <div class="text-small text-meta mb-0">
+                              Access to an instance can be either granted individually to a user, or to an entire team.
+                            </div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Read history</div>
+                            <div class="text-small text-meta mb-0">Allow access to the "Publishing History"</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Publish all content</div>
+                            <div class="text-small text-meta mb-0">Allow to publish all working copies (when not owner or assignee of working copies)</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Access all working copies</div>
+                            <div class="text-small text-meta mb-0">Allow access all working copies, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Manage workflows</div>
+                            <div class="text-small text-meta mb-0">Manage workflows, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Access all content</div>
+                            <div class="text-small text-meta mb-0">Allow access all content, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Manage built-in visibility categories</div>
+                            <div class="text-small text-meta mb-0">Manage all categories, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox" disabled>
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Manage custom visibility categories</div>
+                            <div class="text-small text-meta mb-0">Do crazy stuff in all categories, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                      </div>
+                      <hr>
+                      <div class="d-flex justify-content-end">
+                        <div class="btn btn-sm btn-danger">Confirm Change</div>
+                        <div class="btn btn-sm">Cancel</div>
+                      </div>             
+                    </div>
+                  </div>
+                  <!-- jr-accordion-body:end-->
+                </div>
+                <!-- jr-accordion-item:end -->
+
+                
+                <!-- jr-accordion-item:start -->
+                <div class="jr-accordion-item">
+                  <!-- jr-accordion-header:start -->
+                  <div class="jr-list-item jr-accordion-header">
+                    <div class="jr-list-group shrink">
+                      <div class="jr-icon-combined visible">
+                        <i class="jr-icon jr-icon-browsers-big text-orange"></i>
+                        <i class="jr-icon"></i>
+                      </div>
+                    </div>
+                    <div class="jr-list-group grow">
+                      <div class="h6 mb-0">Scrivito - www.justrelate.com</div>
+                      <div class="text-small text-meta mb-0">Description of this Instance with much more content and context is possible.</div>
+                    </div>
+                    <div class="jr-list-group shrink">
+                      <div class="btn-confirm-group">
+                        <div class="btn btn-sm btn-outline-danger btn-confirm-trigger" onClick="$(this).hide();$(this).next('.btn-confirm-answer').show();">Remove Access</div>
+                        <div class="btn-confirm-answer" style="display: none;">
+                          <div class="btn btn-sm btn-danger" onClick="$(this).closest('.jr-accordion-item').find('.jr-icon-combined').toggleClass('visible hidden');$(this).parent().hide();$(this).parent().prev('.btn-confirm-trigger').show();">Confirm Remove</div>
+                          <div class="btn btn-sm " onClick="$(this).parent().hide();$(this).parent().prev('.btn-confirm-trigger').show();">Cancel</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="jr-list-group shrink">
+                      <div class="btn-accordion" onClick="$(this).closest('.jr-accordion-item').toggleClass('open');"><i class="jr-icon jr-icon-chevron-down"></i></div>
+                    </div>
+                  </div>
+                  <!-- jr-accordion-header:end -->
+                  <!-- jr-accordion-body:start-->
+                  <div class="jr-accordion-body">
+                    <div class="jr-accordion-body-content">
+                      <div class="form-label mb-2">
+                        <span>Permissions</span>
+                        <i class="jr-icon jr-icon-question text-orange" title="Some more infos here"></i>
+                      </div>
+                      <div class="jr-list-select">
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox" checked disabled>
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Instance Access</div>
+                            <div class="text-small text-meta mb-0">
+                              Access to an instance can be either granted individually to a user, or to an entire team.
+                            </div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Read history</div>
+                            <div class="text-small text-meta mb-0">Allow access to the "Publishing History"</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Publish all content</div>
+                            <div class="text-small text-meta mb-0">Allow to publish all working copies (when not owner or assignee of working copies)</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Access all working copies</div>
+                            <div class="text-small text-meta mb-0">Allow access all working copies, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Manage workflows</div>
+                            <div class="text-small text-meta mb-0">Manage workflows, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Access all content</div>
+                            <div class="text-small text-meta mb-0">Allow access all content, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Manage built-in visibility categories</div>
+                            <div class="text-small text-meta mb-0">Manage all categories, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox" disabled>
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Manage custom visibility categories</div>
+                            <div class="text-small text-meta mb-0">Do crazy stuff in all categories, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                      </div>
+                      <hr>
+                      <div class="d-flex justify-content-end">
+                        <div class="btn btn-sm btn-danger">Confirm Change</div>
+                        <div class="btn btn-sm">Cancel</div>
+                      </div>             
+                    </div>
+                  </div>
+                  <!-- jr-accordion-body:end-->
+                </div>
+                <!-- jr-accordion-item:end -->
+
+
+                
+                <!-- jr-accordion-item:start -->
+                <div class="jr-accordion-item">
+                  <!-- jr-accordion-header:start -->
+                  <div class="jr-list-item jr-accordion-header">
+                    <div class="jr-list-group shrink">
+                      <div class="jr-icon-combined visible">
+                        <i class="jr-icon jr-icon-browsers-big text-orange"></i>
+                        <i class="jr-icon"></i>
+                      </div>
+                    </div>
+                    <div class="jr-list-group grow">
+                      <div class="h6 mb-0">Neoeletter - JustRelate</div>
+                      <div class="text-small text-meta mb-0">Description of this Instance with much more content and context is possible.</div>
+                    </div>
+                    <div class="jr-list-group shrink">
+                      <div class="btn-confirm-group">
+                        <div class="btn btn-sm btn-outline-danger btn-confirm-trigger" onClick="$(this).hide();$(this).next('.btn-confirm-answer').show();">Remove Access</div>
+                        <div class="btn-confirm-answer" style="display: none;">
+                          <div class="btn btn-sm btn-danger" onClick="$(this).closest('.jr-accordion-item').find('.jr-icon-combined').toggleClass('visible hidden');$(this).parent().hide();$(this).parent().prev('.btn-confirm-trigger').show();">Confirm Remove</div>
+                          <div class="btn btn-sm " onClick="$(this).parent().hide();$(this).parent().prev('.btn-confirm-trigger').show();">Cancel</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="jr-list-group shrink">
+                      <div class="btn-accordion" onClick="$(this).closest('.jr-accordion-item').toggleClass('open');"><i class="jr-icon jr-icon-chevron-down"></i></div>
+                    </div>
+                  </div>
+                  <!-- jr-accordion-header:end -->
+                  <!-- jr-accordion-body:start-->
+                  <div class="jr-accordion-body">
+                    <div class="jr-accordion-body-content">
+                      <div class="form-label mb-2">
+                        <span>Permissions</span>
+                        <i class="jr-icon jr-icon-question text-orange" title="Some more infos here"></i>
+                      </div>
+                      <div class="jr-list-select">
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox" checked disabled>
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Instance Access</div>
+                            <div class="text-small text-meta mb-0">
+                              Access to an instance can be either granted individually to a user, or to an entire team.
+                            </div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Read history</div>
+                            <div class="text-small text-meta mb-0">Allow access to the "Publishing History"</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Publish all content</div>
+                            <div class="text-small text-meta mb-0">Allow to publish all working copies (when not owner or assignee of working copies)</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Access all working copies</div>
+                            <div class="text-small text-meta mb-0">Allow access all working copies, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Manage workflows</div>
+                            <div class="text-small text-meta mb-0">Manage workflows, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Access all content</div>
+                            <div class="text-small text-meta mb-0">Allow access all content, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Manage built-in visibility categories</div>
+                            <div class="text-small text-meta mb-0">Manage all categories, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox" disabled>
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Manage custom visibility categories</div>
+                            <div class="text-small text-meta mb-0">Do crazy stuff in all categories, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                      </div>
+                      <hr>
+                      <div class="d-flex justify-content-end">
+                        <div class="btn btn-sm btn-danger">Confirm Change</div>
+                        <div class="btn btn-sm">Cancel</div>
+                      </div>             
+                    </div>
+                  </div>
+                  <!-- jr-accordion-body:end-->
+                </div>
+                <!-- jr-accordion-item:end -->
+
+                <!-- jr-accordion-item:start -->
+                <div class="jr-accordion-item">
+                  <!-- jr-accordion-header:start -->
+                  <div class="jr-list-item jr-accordion-header">
+                    <div class="jr-list-group shrink">
+                      <div class="jr-icon-combined hidden">
+                        <i class="jr-icon jr-icon-browsers-big text-orange"></i>
+                        <i class="jr-icon"></i>
+                      </div>
+                    </div>
+                    <div class="jr-list-group grow">
+                      <div class="h6 mb-0">Neoeletter - Sales Demo</div>
+                      <div class="text-small text-meta mb-0">Description of this Instance with much more content and context is possible.</div>
+                    </div>
+                    <div class="jr-list-group shrink">
+                      <div class="btn-confirm-group">
+                        <div class="btn btn-sm btn-outline-success btn-confirm-trigger" onClick="$(this).hide();$(this).next('.btn-confirm-answer').show();">Grant Access</div>
+                        <div class="btn-confirm-answer" style="display: none;">
+                          <div class="btn btn-sm btn-danger" onClick="$(this).closest('.jr-accordion-item').find('.jr-icon-combined').toggleClass('visible hidden');$(this).parent().hide();$(this).parent().prev('.btn-confirm-trigger').show();">Confirm Access</div>
+                          <div class="btn btn-sm " onClick="$(this).parent().hide();$(this).parent().prev('.btn-confirm-trigger').show();">Cancel</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="jr-list-group shrink">
+                      <div class="btn-accordion" onClick="$(this).closest('.jr-accordion-item').toggleClass('open');"><i class="jr-icon jr-icon-chevron-down"></i></div>
+                    </div>
+                  </div>
+                  <!-- jr-accordion-header:end -->
+                  <!-- jr-accordion-body:start-->
+                  <div class="jr-accordion-body">
+                    <div class="jr-accordion-body-content">
+                      <div class="form-label mb-2">
+                        <span>Permissions</span>
+                        <i class="jr-icon jr-icon-question text-orange" title="Some more infos here"></i>
+                      </div>
+                      <div class="jr-list-select">
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox" checked disabled>
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Instance Access</div>
+                            <div class="text-small text-meta mb-0">
+                              Access to an instance can be either granted individually to a user, or to an entire team.
+                            </div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Read history</div>
+                            <div class="text-small text-meta mb-0">Allow access to the "Publishing History"</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Publish all content</div>
+                            <div class="text-small text-meta mb-0">Allow to publish all working copies (when not owner or assignee of working copies)</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Access all working copies</div>
+                            <div class="text-small text-meta mb-0">Allow access all working copies, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Manage workflows</div>
+                            <div class="text-small text-meta mb-0">Manage workflows, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Access all content</div>
+                            <div class="text-small text-meta mb-0">Allow access all content, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Manage built-in visibility categories</div>
+                            <div class="text-small text-meta mb-0">Manage all categories, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox" disabled>
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Manage custom visibility categories</div>
+                            <div class="text-small text-meta mb-0">Do crazy stuff in all categories, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                      </div>
+                      <hr>
+                      <div class="d-flex justify-content-end">
+                        <div class="btn btn-sm btn-danger">Confirm Change</div>
+                        <div class="btn btn-sm">Cancel</div>
+                      </div>             
+                    </div>
+                  </div>
+                  <!-- jr-accordion-body:end-->
+                </div>
+                <!-- jr-accordion-item:end -->
+
+
+                <!-- jr-accordion-item:start -->
+                <div class="jr-accordion-item">
+                  <!-- jr-accordion-header:start -->
+                  <div class="jr-list-item jr-accordion-header">
+                    <div class="jr-list-group shrink">
+                      <div class="jr-icon-combined hidden">
+                        <i class="jr-icon jr-icon-account-big text-orange"></i>
+                        <i class="jr-icon"></i>
+                      </div>
+                    </div>
+                    <div class="jr-list-group grow">
+                      <div class="h6 mb-0">Account Permissions</div>
+                      <div class="text-small text-meta mb-0">Description of this group with much more content and context is possible.</div>
+                    </div>
+                    <div class="jr-list-group shrink">
+                      <div class="btn-confirm-group">
+                        <div class="btn btn-sm btn-outline-success btn-confirm-trigger" onClick="$(this).hide();$(this).next('.btn-confirm-answer').show();">Grant Access</div>
+                        <div class="btn-confirm-answer" style="display: none;">
+                          <div class="btn btn-sm btn-danger" onClick="$(this).closest('.jr-accordion-item').find('.jr-icon-combined').toggleClass('visible hidden');$(this).parent().hide();$(this).parent().prev('.btn-confirm-trigger').show();">Confirm Access</div>
+                          <div class="btn btn-sm " onClick="$(this).parent().hide();$(this).parent().prev('.btn-confirm-trigger').show();">Cancel</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="jr-list-group shrink">
+                      <div class="btn-accordion" onClick="$(this).closest('.jr-accordion-item').toggleClass('open');"><i class="jr-icon jr-icon-chevron-down"></i></div>
+                    </div>
+                  </div>
+                  <!-- jr-accordion-header:end -->
+                  <!-- jr-accordion-body:start-->
+                  <div class="jr-accordion-body">
+                    <div class="jr-accordion-body-content">
+                      <div class="form-label mb-2">
+                        <span>Permissions</span>
+                        <i class="jr-icon jr-icon-question text-orange" title="Some more infos here"></i>
+                      </div>
+                      <div class="jr-list-select">
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox" checked disabled>
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Instance Access</div>
+                            <div class="text-small text-meta mb-0">
+                              Access to an instance can be either granted individually to a user, or to an entire team.
+                            </div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Read history</div>
+                            <div class="text-small text-meta mb-0">Allow access to the "Publishing History"</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Publish all content</div>
+                            <div class="text-small text-meta mb-0">Allow to publish all working copies (when not owner or assignee of working copies)</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Access all working copies</div>
+                            <div class="text-small text-meta mb-0">Allow access all working copies, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Manage workflows</div>
+                            <div class="text-small text-meta mb-0">Manage workflows, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Access all content</div>
+                            <div class="text-small text-meta mb-0">Allow access all content, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox">
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Manage built-in visibility categories</div>
+                            <div class="text-small text-meta mb-0">Manage all categories, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                        <label class="jr-list-select-item">
+                          <input class="jr-list-select-input" type="checkbox" disabled>
+                          <div class="jr-list-select-label">
+                            <div class="h6 mb-0">Manage custom visibility categories</div>
+                            <div class="text-small text-meta mb-0">Do crazy stuff in all categories, even when not owner or assignee</div>
+                          </div>
+                        </label>
+                      </div>
+                      <hr>
+                      <div class="d-flex justify-content-end">
+                        <div class="btn btn-sm btn-danger">Confirm Change</div>
+                        <div class="btn btn-sm">Cancel</div>
+                      </div>             
+                    </div>
+                  </div>
+                  <!-- jr-accordion-body:end-->
+                </div>
+                <!-- jr-accordion-item:end -->
+
+
+              </div>
+              <!-- jr-accordion-wrapper:end -->
+
+
+
+            </div>
+            <div class="card-body tab-pane fade" id="team-members">
+              
+              <form class="row">
+                <div class="col-md-8">
+                  <label for="email" class="form-label">
+                    <span>Add User by eMail address</span>
+                    <i class="jr-icon jr-icon-question text-orange" title="Some more infos here"></i>
+                  </label>
+                  <div class="input-group">
+                    <input type="text" class="form-control form-control" id="email" 
+                    placeholder="Type name or email address..." value="">
+                    <button class="btn btn-addon" type="button"> Add user</button>
+                  </div>
+                </div>
+                
+              </form>
+
+              <hr>
+              <div class="form-label mb-2">
+                <span>Current users in this team</span>
+                <i class="jr-icon jr-icon-question text-orange" title="Some more infos here"></i>
+              </div>
+              
+              <div class="jr-list-search">
+
+              <div class="input-group input-group-search">
+                <input type="text" class="form-control" placeholder="Search in list...">
+                <button class="btn" type="button"><i class="jr-icon jr-icon-lens"></i></button>
+              </div>
+              <div class="jr-list-item-wrapper">
+                <!-- jr-list-item:start -->
+                <div class="jr-list-item">
+                  <div class="jr-list-group shrink">
+                    <i class="jr-icon jr-icon-user-big me-2 d-block text-orange"></i>
+                  </div>
+                  <div class="jr-list-group grow">
+                    <div class="h6 mb-0">Alexander Geßler</div>
+                    <div class="text-small text-meta mb-0">alexander.gessler@justrelate.com</div>
+                  </div>
+                  <div class="jr-list-group shrink">
+                    <div class="btn-confirm-group">
+                      <div class="btn btn-sm btn-outline-danger btn-confirm-trigger" onclick="$(this).hide();$(this).next('.btn-confirm-answer').show();">Remove User</div>
+                      <div class="btn-confirm-answer" style="display: none;">
+                        <div class="btn btn-sm btn-danger" onclick="$(this).closest('.jr-list-item').hide();">Confirm Remove</div>
+                        <div class="btn btn-sm" onclick="$(this).parent().hide();$(this).parent().prev('.btn-confirm-trigger').show();">Cancel</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- jr-list-item:end -->
+                <!-- jr-list-item:start -->
+                <div class="jr-list-item">
+                  <div class="jr-list-group shrink">
+                    <i class="jr-icon jr-icon-user-big me-2 d-block text-orange"></i>
+                  </div>
+                  <div class="jr-list-group grow">
+                    <div class="h6 mb-0">Peter Lustig</div>
+                    <div class="text-small text-meta mb-0">peter.lustig@justrelate.com</div>
+                  </div>
+                  <div class="jr-list-group shrink">
+                    <div class="btn-confirm-group">
+                      <div class="btn btn-sm btn-outline-danger btn-confirm-trigger" onclick="$(this).hide();$(this).next('.btn-confirm-answer').show();">Remove User</div>
+                      <div class="btn-confirm-answer" style="display: none;">
+                        <div class="btn btn-sm btn-danger" onclick="$(this).closest('.jr-list-item').hide();">Confirm Remove</div>
+                        <div class="btn btn-sm" onclick="$(this).parent().hide();$(this).parent().prev('.btn-confirm-trigger').show();">Cancel</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="jr-list-bagde">Invitation pending</div>
+                </div>
+                <!-- jr-list-item:end -->
+                <!-- jr-list-item:start -->
+                <div class="jr-list-item">
+                  <div class="jr-list-group shrink">
+                    <i class="jr-icon jr-icon-user-big me-2 d-block text-orange"></i>
+                  </div>
+                  <div class="jr-list-group grow">
+                    <div class="h6 mb-0">Alexander Geßler</div>
+                    <div class="text-small text-meta mb-0">alexander.gessler@justrelate.com</div>
+                  </div>
+                  <div class="jr-list-group shrink">
+                    <div class="btn-confirm-group">
+                      <div class="btn btn-sm btn-outline-danger btn-confirm-trigger" onclick="$(this).hide();$(this).next('.btn-confirm-answer').show();">Remove User</div>
+                      <div class="btn-confirm-answer" style="display: none;">
+                        <div class="btn btn-sm btn-danger" onclick="$(this).closest('.jr-list-item').hide();">Confirm Remove</div>
+                        <div class="btn btn-sm" onclick="$(this).parent().hide();$(this).parent().prev('.btn-confirm-trigger').show();">Cancel</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- jr-list-item:end -->
+                <!-- jr-list-item:start -->
+                <div class="jr-list-item">
+                  <div class="jr-list-group shrink">
+                    <i class="jr-icon jr-icon-user-big me-2 d-block text-orange"></i>
+                  </div>
+                  <div class="jr-list-group grow">
+                    <div class="h6 mb-0">Peter Lustig</div>
+                    <div class="text-small text-meta mb-0">peter.lustig@justrelate.com</div>
+                  </div>
+                  <div class="jr-list-group shrink">
+                    <div class="btn-confirm-group">
+                      <div class="btn btn-sm btn-outline-danger btn-confirm-trigger" onclick="$(this).hide();$(this).next('.btn-confirm-answer').show();">Remove User</div>
+                      <div class="btn-confirm-answer" style="display: none;">
+                        <div class="btn btn-sm btn-danger" onclick="$(this).closest('.jr-list-item').hide();">Confirm Remove</div>
+                        <div class="btn btn-sm" onclick="$(this).parent().hide();$(this).parent().prev('.btn-confirm-trigger').show();">Cancel</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- jr-list-item:end -->
+                <!-- jr-list-item:start -->
+                <div class="jr-list-item">
+                  <div class="jr-list-group shrink">
+                    <i class="jr-icon jr-icon-user-big me-2 d-block text-orange"></i>
+                  </div>
+                  <div class="jr-list-group grow">
+                    <div class="h6 mb-0">Alexander Geßler</div>
+                    <div class="text-small text-meta mb-0">alexander.gessler@justrelate.com</div>
+                  </div>
+                  <div class="jr-list-group shrink">
+                    <div class="btn-confirm-group">
+                      <div class="btn btn-sm btn-outline-danger btn-confirm-trigger" onclick="$(this).hide();$(this).next('.btn-confirm-answer').show();">Remove User</div>
+                      <div class="btn-confirm-answer" style="display: none;">
+                        <div class="btn btn-sm btn-danger" onclick="$(this).closest('.jr-list-item').hide();">Confirm Remove</div>
+                        <div class="btn btn-sm" onclick="$(this).parent().hide();$(this).parent().prev('.btn-confirm-trigger').show();">Cancel</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- jr-list-item:end -->
+                <!-- jr-list-item:start -->
+                <div class="jr-list-item">
+                  <div class="jr-list-group shrink">
+                    <i class="jr-icon jr-icon-user-big me-2 d-block text-orange"></i>
+                  </div>
+                  <div class="jr-list-group grow">
+                    <div class="h6 mb-0">Peter Lustig</div>
+                    <div class="text-small text-meta mb-0">peter.lustig@justrelate.com</div>
+                  </div>
+                  <div class="jr-list-group shrink">
+                    <div class="btn-confirm-group">
+                      <div class="btn btn-sm btn-outline-danger btn-confirm-trigger" onclick="$(this).hide();$(this).next('.btn-confirm-answer').show();">Remove User</div>
+                      <div class="btn-confirm-answer" style="display: none;">
+                        <div class="btn btn-sm btn-danger" onclick="$(this).closest('.jr-list-item').hide();">Confirm Remove</div>
+                        <div class="btn btn-sm" onclick="$(this).parent().hide();$(this).parent().prev('.btn-confirm-trigger').show();">Cancel</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- jr-list-item:end -->
+                <!-- jr-list-item:start -->
+                <div class="jr-list-item">
+                  <div class="jr-list-group shrink">
+                    <i class="jr-icon jr-icon-user-big me-2 d-block text-orange"></i>
+                  </div>
+                  <div class="jr-list-group grow">
+                    <div class="h6 mb-0">Alexander Geßler</div>
+                    <div class="text-small text-meta mb-0">alexander.gessler@justrelate.com</div>
+                  </div>
+                  <div class="jr-list-group shrink">
+                    <div class="btn-confirm-group">
+                      <div class="btn btn-sm btn-outline-danger btn-confirm-trigger" onclick="$(this).hide();$(this).next('.btn-confirm-answer').show();">Remove User</div>
+                      <div class="btn-confirm-answer" style="display: none;">
+                        <div class="btn btn-sm btn-danger" onclick="$(this).closest('.jr-list-item').hide();">Confirm Remove</div>
+                        <div class="btn btn-sm" onclick="$(this).parent().hide();$(this).parent().prev('.btn-confirm-trigger').show();">Cancel</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- jr-list-item:end -->
+                <!-- jr-list-item:start -->
+                <div class="jr-list-item">
+                  <div class="jr-list-group shrink">
+                    <i class="jr-icon jr-icon-user-big me-2 d-block text-orange"></i>
+                  </div>
+                  <div class="jr-list-group grow">
+                    <div class="h6 mb-0">Peter Lustig</div>
+                    <div class="text-small text-meta mb-0">peter.lustig@justrelate.com</div>
+                  </div>
+                  <div class="jr-list-group shrink">
+                    <div class="btn-confirm-group">
+                      <div class="btn btn-sm btn-outline-danger btn-confirm-trigger" onclick="$(this).hide();$(this).next('.btn-confirm-answer').show();">Remove User</div>
+                      <div class="btn-confirm-answer" style="display: none;">
+                        <div class="btn btn-sm btn-danger" onclick="$(this).closest('.jr-list-item').hide();">Confirm Remove</div>
+                        <div class="btn btn-sm" onclick="$(this).parent().hide();$(this).parent().prev('.btn-confirm-trigger').show();">Cancel</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- jr-list-item:end -->
+                <!-- jr-list-item:start -->
+                <div class="jr-list-item">
+                  <div class="jr-list-group shrink">
+                    <i class="jr-icon jr-icon-user-big me-2 d-block text-orange"></i>
+                  </div>
+                  <div class="jr-list-group grow">
+                    <div class="h6 mb-0">Alexander Geßler</div>
+                    <div class="text-small text-meta mb-0">alexander.gessler@justrelate.com</div>
+                  </div>
+                  <div class="jr-list-group shrink">
+                    <div class="btn-confirm-group">
+                      <div class="btn btn-sm btn-outline-danger btn-confirm-trigger" onclick="$(this).hide();$(this).next('.btn-confirm-answer').show();">Remove User</div>
+                      <div class="btn-confirm-answer" style="display: none;">
+                        <div class="btn btn-sm btn-danger" onclick="$(this).closest('.jr-list-item').hide();">Confirm Remove</div>
+                        <div class="btn btn-sm" onclick="$(this).parent().hide();$(this).parent().prev('.btn-confirm-trigger').show();">Cancel</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- jr-list-item:end -->
+                <!-- jr-list-item:start -->
+                <div class="jr-list-item">
+                  <div class="jr-list-group shrink">
+                    <i class="jr-icon jr-icon-user-big me-2 d-block text-orange"></i>
+                  </div>
+                  <div class="jr-list-group grow">
+                    <div class="h6 mb-0">Peter Lustig</div>
+                    <div class="text-small text-meta mb-0">peter.lustig@justrelate.com</div>
+                  </div>
+                  <div class="jr-list-group shrink">
+                    <div class="btn-confirm-group">
+                      <div class="btn btn-sm btn-outline-danger btn-confirm-trigger" onclick="$(this).hide();$(this).next('.btn-confirm-answer').show();">Remove User</div>
+                      <div class="btn-confirm-answer" style="display: none;">
+                        <div class="btn btn-sm btn-danger" onclick="$(this).closest('.jr-list-item').hide();">Confirm Remove</div>
+                        <div class="btn btn-sm" onclick="$(this).parent().hide();$(this).parent().prev('.btn-confirm-trigger').show();">Cancel</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- jr-list-item:end -->
+              </div>
+              
+
+              </div>
+
+
+
+
+            </div>
+          </div>
+          
+
+
+       <br><br>
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+      </main>
+      <!-- JR MAIN END -->
+    </div>
+    <!-- JR MAIN STAGE END -->
+
+
+
+   
+
+    <ul class="dropdown-menu" id="test-dropdown-settings" data-popper-placement="right-end" style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(149px, -38px);">
+      <li><a class="dropdown-item" href="#"><i class="jr-icon jr-icon-paperplane"></i><span class="label">Action</span></a></li>
+      <li><a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a></li>
+      <li><a class="dropdown-item disabled" href="#"><i class="jr-icon jr-icon-book"></i><span class="label">Hidden option</span></a></li>
+      <li><a class="dropdown-item" href="#"><i class="jr-icon jr-icon-megaphone"></i><span class="label">Start campaign</span></a></li>
+      <li><a class="dropdown-item" href="#"><i class="jr-icon jr-icon-fire"></i><span class="label">Something else here with too much content</span></a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><div class="dropdown-item" onClick="$('body').toggleClass('jr-sidebar-left-label-hide');"><i class="jr-icon jr-icon-gear"></i><span class="label">Toggle sidebar labels</span></div></li>
+      <li><div class="dropdown-item" onClick="$('body').toggleClass('jr-zen-mode');"><i class="jr-icon jr-icon-fire"></i><span class="label">Zen Mode</span></div></li>
+
+    </ul>
+
+    <ul class="dropdown-menu" id="test-dropdown-app-switcher" data-popper-placement="top-left" style="position: absolute; inset: 0 auto auto 0 ; margin: 0px; transform: translate(0, 42px);">
+      <li><div class="dropdown-item"><span class="label jr-brand-settings"></span></div></li>
+      <li><div class="dropdown-item"><span class="label jr-brand-dxhub"></span></div></li>
+      <li><div class="dropdown-item"><span class="label jr-brand-neoletter"></span></div></li>
+      <li><div class="dropdown-item"><span class="label jr-brand-scrivito"></span></div></li>
+      <li><div class="dropdown-item"><span class="label jr-brand-pisa"></span></div></li>
+    </ul>
+
+    </div>
+
+  </body>
+</html>

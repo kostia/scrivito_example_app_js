@@ -1,0 +1,1760 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Settings - Dashboard</title>
+    <!-- CSS -->
+    <link href="../src/assets/css/index.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../src/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../src/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../src/assets/images/favicon.ico">
+
+    <!-- Bootstrap JS for prototyping --> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- jQuery for prototyping -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+
+    </script>
+
+
+  </head>
+  <body>
+
+    <div class="jr-wrapper">
+
+
+    <!-- JR TOPBAR START -->
+    <div class="jr-topbar">
+
+
+      <div class="jr-buttonbar jr-sidebar-toggle" onClick="$(this).toggleClass('open');$('body').toggleClass('jr-sidebar-left-show');">
+        <span class="lines"></span> 
+      </div>
+
+      <div class="jr-buttonbar jr-app-switcher" onClick="$('#test-dropdown-app-switcher').toggleClass('show');$(this).toggleClass('open');">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="jr-buttonbar jr-brand-settings"></div>
+
+      <div class="jr-buttonbar jr-user ms-auto" onClick="$(this).children('.dropdown-menu').toggleClass('show');">
+        <i class="jr-icon jr-icon-user"></i>
+        <span class="label user-name">Alexander Geßler
+          <span class="user-meta">alexander.gessler@justrelate.com</span>
+        </span>
+        <div class="dropdown-menu dropdown-menu-end">
+          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-paperplane"></i><span class="label">Make it fly</span></a>
+          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+        </div>
+      </div>
+
+
+
+
+    </div>
+    <!-- JR TOPBAR END -->
+
+    <!-- JR MAIN STAGE START -->
+    <div class="jr-main-wrapper">
+      <!-- JR SIDEBAR LEFT START -->
+      <div class="jr-sidebar-left">
+
+        <a href="index.html" class="jr-buttonbar active" data-tooltip="Dashbaord" data-flow="right">
+          <i class="jr-icon jr-icon-dashboard"></i>
+          <span class="label">Dashboard</span>
+        </a>
+
+        <a href="#" class="jr-buttonbar" data-tooltip="Products - Setup different tenants for different products" data-flow="right">
+          <i class="jr-icon jr-icon-browsers"></i>
+          <span class="label">Products</span>
+        </a>
+        <a href="teams-overview.html" class="jr-buttonbar" data-tooltip="Teams - Configure Permission Roles" data-flow="right">
+          <i class="jr-icon jr-icon-team"></i>
+          <span class="label">Teams</span>
+        </a>
+        <a href="users-overview.html" class="jr-buttonbar" data-tooltip="Users -  Permissions by Users" data-flow="right">
+          <i class="jr-icon jr-icon-contacts"></i>
+          <span class="label">Users</span>
+        </a>
+        <a href="#" class="jr-buttonbar" data-tooltip="Billing - Access all you financial an contract relevant data" data-flow="right">
+          <i class="jr-icon jr-icon-billing"></i>
+          <span class="label">Billing</span>
+        </a>
+        <a href="#" class="jr-buttonbar" data-tooltip="Account - Configure meta settings for all tenants" data-flow="right">
+          <i class="jr-icon jr-icon-account"></i>
+          <span class="label">Account</span>
+        </a>
+        
+        
+
+      </div>
+      <!-- JR SIDEBAR LEFT END -->
+
+
+      <!-- JR MAIN START -->
+      <main>
+        <div class="container-xxl">
+
+
+          <div class="row">
+            <div class="col-sm-12 col-md-8">
+              <h1>Hello Mr. Geßler,</h1>
+              <p class="text-intro">there are several news in the publish feed, pending reviews and updated marketing data. 
+                 You have two working copies with unpublished content.
+              </p>
+            </div>
+          </div>
+
+          
+
+
+
+
+          <div class="row align-items-stretch">
+
+
+            <div class="col-sm-12 col-md-12 col-lg-8">
+
+              <div class="row multi-row-stretch">
+
+                <div class="col-sm-12 col-md-6">
+                   <!-- card:start -->
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="jr-list-item">
+                        <div class="jr-list-group grow">
+                          <p class="h6 mb-3">Open Rate</p>
+                          <p class="h1 mb-2">42%</p>
+                          <p class="text-meta mb-0">2.2% more than last month</p>
+                        </div>
+                        <div class="jr-list-group">
+                          <i class="jr-icon jr-icon-circle-up-big d-flex my-auto text-green"></i>
+                        </div>
+                        <!-- Dropdown:start-->
+                        <div class="dropdown dropdown-top-right">
+                          <span class="dropdown-btn" onclick="$(this).next('.dropdown-menu').toggleClass('show');"> 
+                            <i class="jr-icon jr-icon-dots-horizontal"></i>
+                          </span>
+                          <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-paperplane"></i><span class="label">Make it fly</span></a>
+                            <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+                            <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+                          </div>
+                        </div>
+                        <!-- Dropdown:end-->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- card:end -->
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <!-- card:start -->
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="jr-list-item">
+                        <div class="jr-list-group grow">
+                          <p class="h6 mb-3">Click Rate</p>
+                          <p class="h1 mb-2">24%</p>
+                          <p class="text-meta mb-0">-2% less than last month</p>
+                        </div>
+                        <div class="jr-list-group">
+                          <i class="jr-icon jr-icon-circle-down-big my-auto text-red"></i>
+                        </div>
+                        <!-- Dropdown:start-->
+                        <div class="dropdown dropdown-top-right">
+                          <span class="dropdown-btn" onClick="$(this).next('.dropdown-menu').toggleClass('show');"> 
+                            <i class="jr-icon jr-icon-dots-horizontal"></i>
+                          </span>
+                          <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-paperplane"></i><span class="label">Make it fly</span></a>
+                            <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+                            <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+                          </div>
+                        </div>
+                        <!-- Dropdown:end-->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- card:end -->
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <!-- card:start -->
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="jr-list-item">
+                        <div class="jr-list-group grow">
+                          <p class="h6 mb-3">Unsubscription Rate</p>
+                          <p class="h1 mb-2">8%</p>
+                          <p class="text-meta mb-0">-0.5% less than last month</p>
+                        </div>
+                        <div class="jr-list-group">
+                          <i class="jr-icon jr-icon-circle-left-big my-auto text-yellow"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- card:end -->
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <!-- card:start -->
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="jr-list-item">
+                        <div class="jr-list-group grow">
+                          <p class="h6 mb-3">Bounces Rate</p>
+                          <p class="h1 mb-2">11%</p>
+                          <p class="text-meta mb-0">-1.5% less than last month</p>
+                        </div>
+                        <div class="jr-list-group">
+                          <i class="jr-icon jr-icon-circle-down-big my-auto text-red"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- card:end -->
+                </div>
+
+              </div>
+
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+
+              <!-- card:start -->
+              <div class="card">
+                <div class="card-body">
+
+                  <p class="h6 mb-3">News Feed</p>
+                  <div class="jr-list-flex">
+                    <div class="jr-list-item">
+                      <div class="jr-list-group jr-list-group-stream">
+                        <i class="jr-icon jr-icon-info mb-auto jr-icon-round"></i>
+                      </div>
+                      <div class="jr-list-group grow mt-0">
+                        <p class="h5 mb-0">Newsletter August 2021</p>
+                        <p class="text-small text-meta">Huge Upgrade for all customers</p>
+                      </div>
+                      <!-- Dropdown:start-->
+                      <div class="dropdown dropdown-top-right">
+                        <span class="dropdown-btn" onClick="$(this).next('.dropdown-menu').toggleClass('show');"> 
+                          <i class="jr-icon jr-icon-dots-horizontal"></i>
+                        </span>
+                        <div class="dropdown-menu dropdown-menu-end">
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-paperplane"></i><span class="label">Make it fly</span></a>
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+                        </div>
+                      </div>
+                      <!-- Dropdown:end-->
+                    </div>
+
+                    <div class="jr-list-item">
+                      <div class="jr-list-group jr-list-group-stream">
+                        <i class="jr-icon jr-icon-info mb-auto jr-icon-round"></i>
+                      </div>
+                      <div class="jr-list-group grow mt-0">
+                        <p class="h5 mb-0">Newsletter August 2021</p>
+                        <p class="text-small text-meta">Huge Upgrade for all customers</p>
+                      </div>
+                      <!-- Dropdown:start-->
+                      <div class="dropdown dropdown-top-right">
+                        <span class="dropdown-btn" onClick="$(this).next('.dropdown-menu').toggleClass('show');"> 
+                          <i class="jr-icon jr-icon-dots-horizontal"></i>
+                        </span>
+                        <div class="dropdown-menu dropdown-menu-end">
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-paperplane"></i><span class="label">Make it fly</span></a>
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+                        </div>
+                      </div>
+                      <!-- Dropdown:end-->
+                    </div>
+
+                   
+
+                    <div class="jr-list-item">
+                      <div class="jr-list-group jr-list-group-stream">
+                        <i class="jr-icon jr-icon-letter-open mb-auto jr-icon-round text-yellow"></i>
+                      </div>
+                      <div class="jr-list-group grow mt-0">
+                        <p class="h5 mb-0">Newsletter Sign Up</p>
+                        <p class="text-small text-meta"><code>Clara Corn - clara.corn@schnaps.de</code></p>
+                      </div>
+                      <!-- Dropdown:start-->
+                      <div class="dropdown dropdown-top-right">
+                        <span class="dropdown-btn" onClick="$(this).next('.dropdown-menu').toggleClass('show');"> 
+                          <i class="jr-icon jr-icon-dots-horizontal"></i>
+                        </span>
+                        <div class="dropdown-menu dropdown-menu-end">
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-paperplane"></i><span class="label">Make it fly</span></a>
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+                        </div>
+                      </div>
+                      <!-- Dropdown:end-->
+                    </div>
+
+                    <div class="jr-list-item">
+                      <div class="jr-list-group jr-list-group-stream">
+                        <i class="jr-icon jr-icon-paperplane mb-auto jr-icon-round text-green"></i>
+                      </div>
+                      <div class="jr-list-group grow mt-0">
+                        <p class="h5 mb-0">Contactform Input</p>
+                        <p class="text-small text-meta">Horst Seehofer - horst@csu.de</p>
+                      </div>
+                      <!-- Dropdown:start-->
+                      <div class="dropdown dropdown-top-right">
+                        <span class="dropdown-btn" onClick="$(this).next('.dropdown-menu').toggleClass('show');"> 
+                          <i class="jr-icon jr-icon-dots-horizontal"></i>
+                        </span>
+                        <div class="dropdown-menu dropdown-menu-end">
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-paperplane"></i><span class="label">Make it fly</span></a>
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+                        </div>
+                      </div>
+                      <!-- Dropdown:end-->
+                    </div>
+
+
+                  </div>
+
+
+
+
+
+                </div>
+              </div>
+              <!-- card:end -->
+
+            </div>
+
+
+         
+
+
+
+
+
+
+
+
+
+        
+
+            <!-- next row -->
+
+
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <!-- card:start -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="jr-list-item">
+                    <div class="jr-list-group grow">
+                      <p class="h6 mb-3">Active Campaigns</p>
+                      <p class="h1 mb-2">12</p>
+                      <p class="text-meta mb-0">2 stopped</p>
+                    </div>
+                    <div class="jr-list-group">
+                      <i class="jr-icon jr-icon-megaphone-big my-auto"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card:end -->
+            </div>
+
+
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <!-- card:start -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="jr-list-item">
+                    <div class="jr-list-group grow">
+                      <p class="h6 mb-3">Mailing Templates</p>
+                      <p class="h1 mb-2">6</p>
+                      <p class="text-meta mb-0">3 drafts</p>
+                    </div>
+                    <div class="jr-list-group">
+                      <i class="jr-icon jr-icon-mailing-template-big my-auto"></i>
+                    </div>
+                  </div>
+                  <!-- Dropdown:start-->
+                  <div class="dropdown dropdown-top-right">
+                    <span class="dropdown-btn" onClick="$(this).next('.dropdown-menu').toggleClass('show');"> 
+                      <i class="jr-icon jr-icon-dots-horizontal"></i>
+                    </span>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-paperplane"></i><span class="label">Make it fly</span></a>
+                      <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+                      <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+                    </div>
+                  </div>
+                  <!-- Dropdown:end-->
+                </div>
+              </div>
+              <!-- card:end -->
+            </div>
+
+
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <!-- card:start -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="jr-list-item">
+                    <div class="jr-list-group grow">
+                      <p class="h6 mb-3">Active Campaigns</p>
+                      <p class="h1 mb-2">89</p>
+                      <p class="text-meta mb-0">4 segments</p>
+                    </div>
+                    <div class="jr-list-group">
+                      <i class="jr-icon jr-icon-contacts-big my-auto"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card:end -->
+            </div>
+
+
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <!-- card:start -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="jr-list-item">
+                    <div class="jr-list-group grow">
+                      <p class="h6 mb-3">Campaign Reports</p>
+                      <p class="h1 mb-2">2</p>
+                      <p class="text-meta mb-0">3 comparisons available</p>
+                    </div>
+                    <div class="jr-list-group">
+                      <i class="jr-icon jr-icon-stats-big my-auto"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card:end -->
+            </div>
+
+    
+
+
+          </div>
+
+          <br><br><br><br><br>
+          <hr>
+          <br>
+          <h4>Playground</h4>
+          <br>
+
+
+
+
+          <h4>Flex List View - data-table</h4>
+          
+
+
+          <!-- card:start -->
+          <div class="card">
+            <div class="jr-list-flex data-table">
+
+              <div class="jr-list-item jr-list-header">
+                <div class="jr-list-group grow">
+                  <span class="text-muted list-sort">Title</span>
+                </div>
+                <div class="jr-list-group">
+                  <span class="text-muted list-sort">Created on</span>
+                </div>
+                <div class="jr-list-group">
+                  <span class="text-muted list-sort">Contacts</span>
+                </div>
+                <div class="jr-list-group">
+                  <span class="text-muted list-sort">Tags</span>
+                </div>
+                <div class="jr-list-group shrink">
+                  <!-- empty for same col sizes -->
+                </div>
+              </div>
+
+
+              <!-- jr-list-item:start -->
+              <div class="jr-list-item">
+                <div class="jr-list-group grow" data-label="Title">
+                  <p class="h5 mb-0">Newsletter August 2021</p>
+                  <p class="text-small text-meta">Huge Upgrade for all customers</p>
+                </div>
+
+                <div class="jr-list-group" data-label="Created on">
+                  <span class="text-meta">20. July 2021</span>
+                </div>
+                <div class="jr-list-group" data-label="Contacts">
+                  <span class="text-meta">23.121</span>
+                </div>
+
+                <div class="jr-list-group" data-label="Tags">
+                  <div>
+                    <span class="badge">Marketing</span><span class="badge">Q4 2021</span><span class="badge">Product News</span>
+                  </div>
+
+                </div>
+
+                <div class="jr-list-group shrink">
+                  
+                  <!-- Dropdown:start-->
+                  <div class="dropdown ms-auto">
+                    <span class="dropdown-btn" onClick="$(this).next('.dropdown-menu').toggleClass('show');"> 
+                      <i class="jr-icon jr-icon-dots-horizontal"></i>
+                    </span>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-pen"></i><span class="label">Edit</span></a>
+                      <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+                      <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+                    </div>
+                  </div>
+                  <!-- Dropdown:end-->
+
+                </div>
+              </div>
+              <!-- jr-list-item:end -->
+
+              <!-- jr-list-item:start -->
+              <div class="jr-list-item">
+                <div class="jr-list-group grow" data-label="Title">
+                  <span class="h5">Marketing Update 2021</span>
+                  <span class="text-small text-meta">Small Update for active contacts</span>
+                </div>
+
+                <div class="jr-list-group" data-label="Created on">
+                  <span class="text-meta">20. July 2021</span>
+                </div>
+                <div class="jr-list-group" data-label="Contacts">
+                  <span class="text-meta">23.121</span>
+                </div>
+
+                <div class="jr-list-group" data-label="Tags">
+                  <div>
+                    <span class="badge">Marketing</span>
+                  </div>
+
+                </div>
+
+                <div class="jr-list-group shrink">
+                  
+                  <!-- Dropdown:start-->
+                  <div class="dropdown ms-auto">
+                    <span class="dropdown-btn" onClick="$(this).next('.dropdown-menu').toggleClass('show');"> 
+                      <i class="jr-icon jr-icon-dots-horizontal"></i>
+                    </span>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-pen"></i><span class="label">Edit</span></a>
+                      <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+                      <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+                    </div>
+                  </div>
+                  <!-- Dropdown:end-->
+
+                </div>
+              </div>
+              <!-- jr-list-item:end -->
+
+              <!-- jr-list-item:start -->
+              <div class="jr-list-item">
+                <div class="jr-list-group grow" data-label="Title">
+                  <span class="h5">Newsletter Q3 2021</span>
+                  <span class="text-small text-meta">Avarge News for everyone</span>
+                </div>
+
+                <div class="jr-list-group" data-label="Created on">
+                  <span class="text-meta">20. July 2021</span>
+                </div>
+                <div class="jr-list-group" data-label="Contacts">
+                  <span class="text-meta">23.121</span>
+                </div>
+
+                <div class="jr-list-group" data-label="Tags">
+                  <div>
+                    <span class="badge">Newsletter</span><span class="badge">2021</span><span class="badge">News</span>
+                    <span class="badge bg-yellow">Marketing</span><span class="badge bg-red">Q4 2021</span><span class="badge bg-green">Product News</span>
+                  </div>
+
+                </div>
+
+                <div class="jr-list-group shrink">
+                  
+                  <!-- Dropdown:start-->
+                  <div class="dropdown ms-auto">
+                    <span class="dropdown-btn" onClick="$(this).next('.dropdown-menu').toggleClass('show');"> 
+                      <i class="jr-icon jr-icon-dots-horizontal"></i>
+                    </span>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-pen"></i><span class="label">Edit</span></a>
+                      <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+                      <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+                    </div>
+                  </div>
+                  <!-- Dropdown:end-->
+
+                </div>
+              </div>
+              <!-- jr-list-item:end -->
+
+            </div>
+          </div>
+          <!-- card:end -->
+
+
+
+
+
+          <br> <br>
+
+
+
+          <h4>Real Table View - responsive-stacked</h4>
+          
+          <!-- card:start -->
+          <div class="card">
+            
+            <div class="responsive-stacked">
+              <table class="table table-hover mb-0">
+                <thead>
+                  <tr>
+                    <th>
+                      <a href="#" class="text-muted">
+                        Title
+                      </a>
+                    </th>
+                    <th>
+                      <a href="#" class="text-muted">
+                        Created on
+                      </a>
+                    </th>
+                    <th>
+                      <a href="#" class="text-muted">
+                        Contacts
+                      </a>
+                    </th>
+                    <th>
+                      <a href="#" class="text-muted" >
+                        Tags
+                      </a>
+                    </th>
+                    <th>
+                    </th>
+                   
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <tr>
+                    <td data-label="Tilte">
+                      <p class="h5 mb-0">Newsletter August 2021</p>
+                      <p class="text-small text-meta mb-0">Huge Upgrade for all customers</p>
+                    </td>
+                    <td data-label="Created on">
+                      <span class="text-meta">20. July 2021</span>
+                    </td>
+                    <td data-label="Contacts">
+                      <span class="text-meta">23.121</span>
+                    </td>
+                    <td data-label="Tags">
+                      <div>
+                        <span class="badge">Marketing</span><span class="badge">Q4 2021</span><span class="badge">Product News</span>
+                      </div>
+                    </td>
+                    <td class="text-end">
+                      <!-- Dropdown:start-->
+                      <div class="dropdown ms-auto">
+                        <span class="dropdown-btn" onClick="$(this).next('.dropdown-menu').toggleClass('show');"> 
+                          <i class="jr-icon jr-icon-dots-horizontal"></i>
+                        </span>
+                        <div class="dropdown-menu dropdown-menu-end">
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-pen"></i><span class="label">Edit</span></a>
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+                        </div>
+                      </div>
+                      <!-- Dropdown:end-->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="Title">
+                      <p class="h5 mb-0">Marketing Update 2021</p>
+                      <p class="text-small text-meta mb-0">Small Update for active contacts</p>
+                    </td>
+                    <td data-label="Created on">
+                      <span class="text-meta">20. July 2021</span>
+                    </td>
+                    <td data-label="Contacts">
+                      <span class="text-meta">23.121</span>
+                    </td>
+                    <td data-label="Tags">
+                      <div>
+                        <span class="badge">Marketing</span>
+                      </div>
+                    </td>
+                    <td class="text-end">
+                      <!-- Dropdown:start-->
+                      <div class="dropdown ms-auto">
+                        <span class="dropdown-btn" onClick="$(this).next('.dropdown-menu').toggleClass('show');"> 
+                          <i class="jr-icon jr-icon-dots-horizontal"></i>
+                        </span>
+                        <div class="dropdown-menu dropdown-menu-end">
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-pen"></i><span class="label">Edit</span></a>
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+                        </div>
+                      </div>
+                      <!-- Dropdown:end-->
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td data-label="Title">
+                      <p class="h5 mb-0">News Q3 2021</p>
+                      <p class="text-small text-meta mb-0">Small Upgrade for all </p>
+                    </td>
+                    <td data-label="Created on">
+                      <span class="text-meta">20. July 2021</span>
+                    </td>
+                    <td data-label="Contacts">
+                      <span class="text-meta">23.121</span>
+                    </td>
+                    <td data-label="Tags">
+                      <div>
+                        <span class="badge">Newsletter</span><span class="badge">2021</span><span class="badge">News</span>
+                        <span class="badge bg-yellow">Marketing</span><span class="badge bg-red">Q4 2021</span><span class="badge bg-green">Product News</span>
+                      </div>
+                    </td>
+                    <td class="text-end">
+                      <!-- Dropdown:start-->
+                      <div class="dropdown ms-auto">
+                        <span class="dropdown-btn" onClick="$(this).next('.dropdown-menu').toggleClass('show');"> 
+                          <i class="jr-icon jr-icon-dots-horizontal"></i>
+                        </span>
+                        <div class="dropdown-menu dropdown-menu-end">
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-pen"></i><span class="label">Edit</span></a>
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+                        </div>
+                      </div>
+                      <!-- Dropdown:end-->
+                    </td>
+                  </tr>
+                  
+                  
+             
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+          <!-- card:end -->
+
+          <br>
+          <h4>Real Table View - responsive-scroll</h4>
+          
+          <!-- card:start -->
+          <div class="card">
+            
+            <div class="responsive-scroll">
+              <table class="table table-hover mb-0">
+                <thead>
+                  <tr>
+                    <th>
+                      <a href="#" class="text-muted">
+                        Title
+                      </a>
+                    </th>
+                    <th>
+                      <a href="#" class="text-muted">
+                        Created on
+                      </a>
+                    </th>
+                    <th>
+                      <a href="#" class="text-muted">
+                        Contacts
+                      </a>
+                    </th>
+                    <th>
+                      <a href="#" class="text-muted" >
+                        Tags
+                      </a>
+                    </th>
+                    <th>
+                    </th>
+                   
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <tr>
+                    <td>
+                      <p class="h5 mb-0">Newsletter August 2021</p>
+                      <p class="text-small text-meta mb-0">Huge Upgrade for all customers</p>
+                    </td>
+                    <td>
+                      <span class="text-meta">20. July 2021</span>
+                    </td>
+                    <td >
+                      <span class="text-meta">23.121</span>
+                    </td>
+                    <td>
+                      <div>
+                        <span class="badge">Marketing</span><span class="badge">Q4 2021</span><span class="badge">Product News</span>
+                      </div>
+                    </td>
+                    <td class="text-end">
+                    <!-- Dropdown:start-->
+                    <div class="dropdown ms-auto">
+                      <span class="dropdown-btn" onClick="$(this).next('.dropdown-menu').toggleClass('show');"> 
+                        <i class="jr-icon jr-icon-dots-horizontal"></i>
+                      </span>
+                      <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-pen"></i><span class="label">Edit</span></a>
+                        <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+                        <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+                      </div>
+                    </div>
+                    <!-- Dropdown:end-->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="h5 mb-0">Marketing Update 2021</p>
+                      <p class="text-small text-meta mb-0">Small Update for active contacts</p>
+                    </td>
+                    <td>
+                      <span class="text-meta">20. July 2021</span>
+                    </td>
+                    <td >
+                      <span class="text-meta">23.121</span>
+                    </td>
+                    <td>
+                      <div>
+                        <span class="badge">Marketing</span>
+                      </div>
+                    </td>
+                    <td class="text-end">
+                    <!-- Dropdown:start-->
+                    <div class="dropdown ms-auto">
+                      <span class="dropdown-btn" onClick="$(this).next('.dropdown-menu').toggleClass('show');"> 
+                        <i class="jr-icon jr-icon-dots-horizontal"></i>
+                      </span>
+                      <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-pen"></i><span class="label">Edit</span></a>
+                        <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+                        <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+                      </div>
+                    </div>
+                    <!-- Dropdown:end-->
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td>
+                      <p class="h5 mb-0">News Q3 2021</p>
+                      <p class="text-small text-meta mb-0">Small Upgrade for all </p>
+                    </td>
+                    <td>
+                      <span class="text-meta">20. July 2021</span>
+                    </td>
+                    <td >
+                      <span class="text-meta">23.121</span>
+                    </td>
+                    <td>
+                      <div>
+                        <span class="badge">Newsletter</span><span class="badge">2021</span><span class="badge">News</span>
+                        <span class="badge bg-yellow">Marketing</span><span class="badge bg-red">Q4 2021</span><span class="badge bg-green">Product News</span>
+                      </div>
+                    </td>
+                    <td class="text-end">
+                    <!-- Dropdown:start-->
+                    <div class="dropdown ms-auto">
+                      <span class="dropdown-btn" onClick="$(this).next('.dropdown-menu').toggleClass('show');"> 
+                        <i class="jr-icon jr-icon-dots-horizontal"></i>
+                      </span>
+                      <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-pen"></i><span class="label">Edit</span></a>
+                        <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+                        <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+                      </div>
+                    </div>
+                    <!-- Dropdown:end-->
+                    </td>
+                  </tr>
+                  
+                  
+             
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+          <!-- card:end -->
+
+          <br><br>
+
+          <h4>Order Table View</h4>
+          
+
+
+          <!-- card:start -->
+          <div class="card">
+            <div class="card-header">
+
+              <!-- Title -->
+              <p class="h6 my-auto">Overview Form Data</p>
+
+              <!-- Dropdown:start-->
+              <div class="dropdown ms-auto">
+                <span class="dropdown-btn" onClick="$(this).next('.dropdown-menu').toggleClass('show');"> 
+                  <i class="jr-icon jr-icon-dots-horizontal"></i>
+                </span>
+                <div class="dropdown-menu dropdown-menu-end">
+                  <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-pen"></i><span class="label">Edit</span></a>
+                  <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+                  <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+                </div>
+              </div>
+              <!-- Dropdown:end-->
+
+            </div>
+            
+            <div class="responsive-scroll">
+              <table class="table table-hover mb-0">
+                <thead>
+                  <tr>
+                    <th>
+
+                      <!-- Checkbox -->
+                      <div class="form-check mb-n2">
+                        <input class="form-check-input list-checkbox-all" id="ordersSelectAll" name="ordersSelect" type="checkbox">
+                        <label class="form-check-label" for="ordersSelectAll">
+                          &nbsp;
+                        </label>
+                      </div>
+
+                    </th>
+                    <th>
+                      <a href="#" class="text-muted list-sort" data-sort="orders-order">
+                        Order
+                      </a>
+                    </th>
+                    <th>
+                      <a href="#" class="text-muted list-sort" data-sort="orders-product">
+                        Product
+                      </a>
+                    </th>
+                    <th>
+                      <a href="#" class="text-muted list-sort" data-sort="orders-date">
+                        Date
+                      </a>
+                    </th>
+                    <th>
+                      <a href="#" class="text-muted list-sort" data-sort="orders-total">
+                        Total
+                      </a>
+                    </th>
+                    <th>
+                      <a href="#" class="text-muted list-sort" data-sort="orders-status">
+                        Status
+                      </a>
+                    </th>
+                    <th colspan="2">
+                      <a href="#" class="text-muted list-sort" data-sort="orders-method">
+                        Payment method
+                      </a>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="list"><tr>
+                    <td>
+
+                      <!-- Checkbox -->
+                      <div class="form-check mb-n2">
+                        <input class="form-check-input list-checkbox" id="ordersSelectOne" name="ordersSelect" type="checkbox">
+                        <label class="form-check-label-label" for="ordersSelectOne">
+                          &nbsp;
+                        </label>
+                      </div>
+
+                    </td>
+                    <td class="orders-order">
+                      #6520
+                    </td>
+                    <td class="orders-product">
+                      5' x 3' Wall Poster
+                    </td>
+                    <td class="orders-date">
+                      <time datetime="2018-07-30">07/30/18</time>
+                    </td>
+                    <td class="orders-total">
+                      $55.25
+                    </td>
+                    <td class="orders-status">
+
+                      <!-- Badge -->
+                      <div class="badge bg-success-soft">
+                        Shipped
+                      </div>
+
+                    </td>
+                    <td class="orders-method">
+                      Mastercard
+                    </td>
+                    <td class="text-end">
+
+                    <!-- Dropdown:start-->
+                    <div class="dropdown ms-auto">
+                      <span class="dropdown-btn" onClick="$(this).next('.dropdown-menu').toggleClass('show');"> 
+                        <i class="jr-icon jr-icon-dots-horizontal"></i>
+                      </span>
+                      <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-pen"></i><span class="label">Edit</span></a>
+                        <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+                        <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+                      </div>
+                    </div>
+                    <!-- Dropdown:end-->
+
+                    </td>
+                  </tr><tr>
+                    <td>
+
+                      <!-- Checkbox -->
+                      <div class="form-check mb-n2">
+                        <input class="form-check-input list-checkbox" id="ordersSelectTwo" name="ordersSelect" type="checkbox">
+                        <label class="form-check-label-label" for="ordersSelectTwo">
+                          &nbsp;
+                        </label>
+                      </div>
+
+                    </td>
+                    <td class="orders-order">
+                      #6521
+                    </td>
+                    <td class="orders-product">
+                      XL Logo Tee
+                    </td>
+                    <td class="orders-date">
+                      <time datetime="2018-07-30">07/30/18</time>
+                    </td>
+                    <td class="orders-total">
+                      $14.99
+                    </td>
+                    <td class="orders-status">
+                      <div class="badge bg-success-soft">
+                        Shipped
+                      </div>
+                    </td>
+                    <td class="orders-method">
+                      Paypal
+                    </td>
+                    <td class="text-end">
+
+                      <!-- Dropdown:start-->
+                      <div class="dropdown ms-auto">
+                        <span class="dropdown-btn" onClick="$(this).next('.dropdown-menu').toggleClass('show');"> 
+                          <i class="jr-icon jr-icon-dots-horizontal"></i>
+                        </span>
+                        <div class="dropdown-menu dropdown-menu-end">
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-pen"></i><span class="label">Edit</span></a>
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+                        </div>
+                      </div>
+                      <!-- Dropdown:end-->
+                  
+                    </td>
+                  </tr><tr>
+                    <td>
+
+                      <!-- Checkbox -->
+                      <div class="form-check mb-n2">
+                        <input class="form-check-input list-checkbox" id="ordersSelectThree" name="ordersSelect" type="checkbox">
+                        <label class="form-check-label-label" for="ordersSelectThree">
+                          &nbsp;
+                        </label>
+                      </div>
+
+                    </td>
+                    <td class="orders-order">
+                      #6522
+                    </td>
+                    <td class="orders-product">
+                      Flexfit Hat
+                    </td>
+                    <td class="orders-date">
+                      <time datetime="2018-07-28">07/28/18</time>
+                    </td>
+                    <td class="orders-total">
+                      $25.50
+                    </td>
+                    <td class="orders-sratus">
+
+                      <!-- Badge -->
+                      <div class="badge bg-warning-soft">
+                        Processing
+                      </div>
+
+                    </td>
+                    <td class="orders-method">
+                      Visa
+                    </td>
+                    <td class="text-end">
+
+                      <!-- Dropdown:start-->
+                      <div class="dropdown ms-auto">
+                        <span class="dropdown-btn" onClick="$(this).next('.dropdown-menu').toggleClass('show');"> 
+                          <i class="jr-icon jr-icon-dots-horizontal"></i>
+                        </span>
+                        <div class="dropdown-menu dropdown-menu-end">
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-pen"></i><span class="label">Edit</span></a>
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+                        </div>
+                      </div>
+                      <!-- Dropdown:end-->
+                  
+                    </td>
+                  </tr><tr>
+                    <td>
+
+                      <!-- Checkbox -->
+                      <div class="form-check mb-n2">
+                        <input class="form-check-input list-checkbox" id="ordersSelectFour" name="ordersSelect" type="checkbox">
+                        <label class="form-check-label-label" for="ordersSelectFour">
+                          &nbsp;
+                        </label>
+                      </div>
+
+                    </td>
+                    <td class="orders-order">
+                      #6523
+                    </td>
+                    <td class="orders-product">
+                      Reversible Hoodie
+                    </td>
+                    <td class="orders-date">
+                      <time datetime="2018-07-27">07/27/18</time>
+                    </td>
+                    <td class="orders-total">
+                      $64.99
+                    </td>
+                    <td class="orders-status">
+
+                      <!-- Badge -->
+                      <div class="badge bg-danger-soft">
+                        Cancelled
+                      </div>
+
+                    </td>
+                    <td class="orders-method">
+                      Amex
+                    </td>
+                    <td class="text-end">
+
+                      <!-- Dropdown:start-->
+                      <div class="dropdown ms-auto">
+                        <span class="dropdown-btn" onClick="$(this).next('.dropdown-menu').toggleClass('show');"> 
+                          <i class="jr-icon jr-icon-dots-horizontal"></i>
+                        </span>
+                        <div class="dropdown-menu dropdown-menu-end">
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-pen"></i><span class="label">Edit</span></a>
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+                          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+                        </div>
+                      </div>
+                      <!-- Dropdown:end-->
+                  
+                    </td>
+                  </tr></tbody>
+              </table>
+            </div>
+
+          </div>
+          <!-- card:end -->
+
+
+          <br><br>
+
+          <h4>Form test - playground</h4>
+
+          <!-- Form test -->
+
+          <!-- card:start -->
+          <div class="card">
+            <div class="card-body">
+
+              <form class="row g-3">
+                <div class="col-md-6">
+                  <label for="inputEmail4" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="inputEmail4">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="inputPassword4" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="inputPassword4">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputAddress" class="form-label">Address</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <div class="col-md-6">
+                  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+
+
+
+                
+
+                <div class="col-md-6">
+                  <label for="inputAddress2" class="form-label">Address readonly input</label>
+                  <input type="text"  class="form-control-readonly" id="inputAddress2" placeholder="1234 Main St" value="Kitzingstraße 15, 12277 Berlin" disabled>
+                </div>
+                <div class="col-md-6">
+                  <label for="inputAddress2" class="form-label">Address plaintext input</label>
+                  <input type="text"  class="form-control-plaintext" id="inputAddress2" placeholder="1234 Main St"  value="Kitzingstraße 15, 12277 Berlin" disabled>
+                </div>
+                <div class="col-md-6">
+                  <label for="inputAddress3" class="form-label">Address plaintext div</label>
+                  <div class="form-control-plaintext" id="inputAddress3">Kitzingstraße 15, 12277 Berlin</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="inputCity" class="form-label">City</label>
+                  <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required="">
+                  <div id="validationServer03Feedback" class="invalid-feedback">
+                    Please provide a valid city.
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="inputState" class="form-label">State</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="col-md-2">
+                  <label for="inputZip" class="form-label">Zip</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div>
+
+                <div class="col-md-4">
+                  <label for="inputCity" class="form-label">Checkboxes</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Option 1
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="flexCheckDefault2" disabled>
+                    <label class="form-check-label" for="flexCheckDefault2">
+                      Option 2 - disabled
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="flexCheckDefault3" checked>
+                    <label class="form-check-label" for="flexCheckDefault3">
+                      Option 3
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <label for="inputCity" class="form-label">Radios</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Option 1
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" disabled>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Option 2 - disabled
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+                    <label class="form-check-label" for="flexRadioDefault3">
+                      Option 3
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <label for="inputCity" class="form-label">Switches</label>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
+                    <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
+                    <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
+                  </div>
+
+                </div>
+
+                <div class="col-12">
+                  <div class="btn">Cancel</div><button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+              </form>
+
+
+            </div>
+          </div>
+
+
+          
+
+
+
+
+          <!-- ALL ICONS -->
+          <h4>All Icons</h4>
+          <!-- card:start -->
+          <div class="card">
+            <div class="card-body">
+
+              <i class="jr-icon"></i><br>
+
+              <i class="jr-icon jr-icon-dashboard"></i>
+              <i class="jr-icon jr-icon-dashboard-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-megaphone"></i>
+              <i class="jr-icon jr-icon-megaphone-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-contacts"></i>
+              <i class="jr-icon jr-icon-contacts-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-letter"></i>
+              <i class="jr-icon jr-icon-letter-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-lens"></i>
+              <i class="jr-icon jr-icon-lens-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-lightning"></i>
+              <i class="jr-icon jr-icon-lightning-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-pen"></i>
+              <i class="jr-icon jr-icon-pen-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-alert"></i>
+              <i class="jr-icon jr-icon-alert-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-info"></i>
+              <i class="jr-icon jr-icon-info-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-fire"></i>
+              <i class="jr-icon jr-icon-fire-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-user"></i>
+              <i class="jr-icon jr-icon-user-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-letter-open"></i>
+              <i class="jr-icon jr-icon-letter-open-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-stats"></i>
+              <i class="jr-icon jr-icon-stats-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-mailing-template"></i>
+              <i class="jr-icon jr-icon-mailing-template-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-table"></i>
+              <i class="jr-icon jr-icon-table-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-paperplane"></i>
+              <i class="jr-icon jr-icon-paperplane-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-book"></i>
+              <i class="jr-icon jr-icon-book-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-gear"></i>
+              <i class="jr-icon jr-icon-gear-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-grid"></i>
+              <i class="jr-icon jr-icon-grid-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-list"></i>
+              <i class="jr-icon jr-icon-list-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-filter"></i>
+              <i class="jr-icon jr-icon-filter-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-chevron-up"></i>
+              <i class="jr-icon jr-icon-chevron-right"></i>
+              <i class="jr-icon jr-icon-chevron-down"></i>
+              <i class="jr-icon jr-icon-chevron-left"></i>
+              <br>
+              <i class="jr-icon jr-icon-chevron-up-big"></i>
+              <i class="jr-icon jr-icon-chevron-right-big"></i>
+              <i class="jr-icon jr-icon-chevron-down-big"></i>
+              <i class="jr-icon jr-icon-chevron-left-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-circle-up"></i>
+              <i class="jr-icon jr-icon-circle-right"></i>
+              <i class="jr-icon jr-icon-circle-down"></i>
+              <i class="jr-icon jr-icon-circle-left"></i>
+              <br>
+              <i class="jr-icon jr-icon-circle-up-big"></i>
+              <i class="jr-icon jr-icon-circle-right-big"></i>
+              <i class="jr-icon jr-icon-circle-down-big"></i>
+              <i class="jr-icon jr-icon-circle-left-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-dots-vertical"></i>
+              <i class="jr-icon jr-icon-dots-horizontal"></i>    
+
+              <br>
+              <i class="jr-icon jr-icon-facebook"></i>
+              <i class="jr-icon jr-icon-twitter"></i>
+              <i class="jr-icon jr-icon-google"></i>
+              <i class="jr-icon jr-icon-linkedin"></i>
+              <i class="jr-icon jr-icon-github"></i>
+
+              <br>
+              <i class="jr-icon jr-icon-browsers"></i>
+              <i class="jr-icon jr-icon-browsers-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-team"></i>
+              <i class="jr-icon jr-icon-team-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-billing"></i>
+              <i class="jr-icon jr-icon-billing-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-account"></i>
+              <i class="jr-icon jr-icon-account-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-question"></i>
+              <i class="jr-icon jr-icon-question-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-key"></i>
+              <br>
+              <i class="jr-icon jr-icon-eye"></i>
+              <i class="jr-icon jr-icon-eye-big"></i>
+              <br>
+              <i class="jr-icon jr-icon-eye-slash"></i>
+              <i class="jr-icon jr-icon-eye-slash-big"></i>
+
+            </div>
+          </div>
+          <!-- card:start -->
+          <!-- ALL ICONS -->
+          
+
+
+
+
+
+
+
+
+
+
+            <!-- OLD -->
+
+
+            <h1>Headline H1</h1>
+            <h2>Headline H2</h2>
+            <h3>Headline H3</h3>
+            <h4>Headline H4</h4>
+            <h5>Headline H5</h5>
+            <h6>Headline H6</h6>
+
+            <p>There are five tiers to the Bootstrap grid system, one for each range of devices we support. Each tier starts at a minimum viewport size and automatically applies to the larger devices unless overridden.</p>
+
+            <p>more to come..</p>
+
+            <code>Extra code inside</code>
+            <br> <br>
+            <h4>Button test</h4>
+            <div class="card">
+              <div class="card-body">
+
+
+                <h5>Buttons btn</h5>
+
+                <div class="btn">btn</div>
+                <a href="" class="btn">btn</a>
+                <button class="btn">btn</button>
+                <button class="btn btn-sm">btn btn-sm</button>
+                <button class="btn disabled">btn disabled</button>
+
+                <br><br>
+                <h5>Buttons btn-primary</h5>
+
+                <div class="btn btn-primary">btn-primary</div>
+                <a href="" class="btn btn-primary">btn-primary</a>
+                <button class="btn btn-primary">btn-primary</button>
+                <button class="btn btn-primary" disabled>btn-primary disabled</button>
+
+
+                <br><br>
+                <h5>Buttons btn-outline-success</h5>
+
+                <div class="btn btn-outline-success">btn-success</div>
+                <a href="" class="btn btn-outline-success">btn-success</a>
+                <button class="btn btn-outline-success">btn-success</button>
+                <button class="btn btn-outline-success" disabled>btn-success disabled</button>
+
+                <br><br>
+                <h5>Buttons btn-outline-danger</h5>
+
+                <div class="btn btn-outline-danger">btn-danger</div>
+                <a href="" class="btn btn-outline-danger">btn-danger</a>
+                <button class="btn btn-outline-danger">btn-danger</button>
+                <button class="btn btn-outline-danger" disabled>btn-danger disabled</button>
+
+
+                <br><br>
+                <h5>Buttons btn-outline-orange</h5>
+
+                <div class="btn btn-outline-orange">btn-orange</div>
+                <a href="" class="btn btn-outline-orange">btn-orange</a>
+                <button class="btn btn-outline-orange">btn-orange</button>
+                <button class="btn btn-outline-orange" disabled>btn-orange disabled</button>
+
+
+                <br><br>
+                <h5>Buttons btn-success</h5>
+
+                <div class="btn btn-success">btn-success</div>
+                <a href="" class="btn btn-success">btn-success</a>
+                <button class="btn btn-success">btn-success</button>
+                <button class="btn btn-success" disabled>btn-success disabled</button>
+
+                <br><br>
+                <h5>Buttons btn-danger</h5>
+
+                <div class="btn btn-danger">btn-danger</div>
+                <a href="" class="btn btn-danger">btn-danger</a>
+                <button class="btn btn-danger">btn-danger</button>
+                <button class="btn btn-danger" disabled>btn-danger disabled</button>
+
+                <br><br>
+                <h5>Buttons btn-orange</h5>
+
+                <div class="btn btn-orange">btn-orange</div>
+                <a href="" class="btn btn-orange">btn-orange</a>
+                <button class="btn btn-orange">btn-orange</button>
+                <button class="btn btn-orange" disabled>btn-orange disabled</button>
+
+              </div>
+            </div>
+
+            <br>
+            <div class="btn btn-primary">Save</div>
+            <div class="btn btn-primary disabled">Primary disabled</div>
+            <div class="btn">Cancel</div>
+      
+
+            <a href="" class="btn btn-outline-orange "><i class="jr-icon jr-icon-lens"></i><span>Icon Button</span></a>
+
+            <div class="btn btn-outline-success">Add Form</div>
+            <div class="btn btn-outline-danger">Delete Form</div>
+
+
+            <br><br>
+
+            <!-- modal small test -->
+            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#jr-modal-small-test1">
+              Delete Forms demo modal
+            </button>
+            <br><br>
+            <!-- modal big test -->
+            <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#jr-modal-big-test1">
+              Add new Form
+            </button>
+
+            
+
+
+
+
+
+
+<pre>
+<code class="language-html" data-lang="html">
+code content goes here
+</code>
+</pre>
+
+            <br><br>
+
+      </main>
+      <!-- JR MAIN END -->
+
+      <!-- JR SIDEBAR RIGHT START -->
+      <div class="jr-sidebar-right" style="display: none;">
+        <div class="jr-buttonbar" data-tooltip="Info" data-flow="left"><i class="jr-icon jr-icon-info""></i></div>
+        <div class="jr-buttonbar" data-tooltip="Edit here" data-flow="left"><i class="jr-icon jr-icon-pen"></i></div>
+        <div class="jr-buttonbar mt-auto" data-tooltip="Lightning" data-flow="left"><i class="jr-icon jr-icon-lightning"></i></div>
+      </div>
+      <!-- JR SIDEBAR RIGHT END -->
+    </div>
+    <!-- JR MAIN STAGE END -->
+
+    <!-- JR BOTTOMBAR START -->
+    <div class="jr-bottombar justify-content-end" style="display: none;">
+      <div class="btn me-auto">Cancel</div>
+      <div class="btn disabled">Save Draft</div>
+      <div class="btn btn-primary">Define Settings</div>
+    </div>
+    <!-- JR BOTTOMBAR END -->
+
+   
+
+    <ul class="dropdown-menu" id="test-dropdown-settings" data-popper-placement="right-end" style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(149px, -38px);">
+      <li><a class="dropdown-item" href="#"><i class="jr-icon jr-icon-paperplane"></i><span class="label">Action</span></a></li>
+      <li><a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a></li>
+      <li><a class="dropdown-item disabled" href="#"><i class="jr-icon jr-icon-book"></i><span class="label">Hidden option</span></a></li>
+      <li><a class="dropdown-item" href="#"><i class="jr-icon jr-icon-megaphone"></i><span class="label">Start campaign</span></a></li>
+      <li><a class="dropdown-item" href="#"><i class="jr-icon jr-icon-fire"></i><span class="label">Something else here with too much content</span></a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><div class="dropdown-item" onClick="$('body').toggleClass('jr-sidebar-left-label-hide');"><i class="jr-icon jr-icon-gear"></i><span class="label">Toggle sidebar labels</span></div></li>
+      <li><div class="dropdown-item" onClick="$('body').toggleClass('jr-zen-mode');"><i class="jr-icon jr-icon-fire"></i><span class="label">Zen Mode</span></div></li>
+
+    </ul>
+
+    <ul class="dropdown-menu" id="test-dropdown-app-switcher" data-popper-placement="top-left" style="position: absolute; inset: 0 auto auto 0 ; margin: 0px; transform: translate(0, 42px);">
+      <li><div class="dropdown-item"><span class="label jr-brand-settings"></span></div></li>
+      <li><div class="dropdown-item"><span class="label jr-brand-dxhub"></span></div></li>
+      <li><div class="dropdown-item"><span class="label jr-brand-neoletter"></span></div></li>
+      <li><div class="dropdown-item"><span class="label jr-brand-scrivito"></span></div></li>
+      <li><div class="dropdown-item"><span class="label jr-brand-pisa"></span></div></li>
+    </ul>
+
+
+    </div>
+
+
+    <div class="fade toast show border-top-red" role="alert" aria-live="assertive" aria-atomic="true" style="position: fixed; top: 50px; right: 30px; z-index: 11;">
+      <div class="toast-body">
+        <button type="button" class="btn-close" aria-label="Close" data-dismiss="toast" onClick="$('.toast').hide();"></button>
+        <div class="toast-message">
+          <div class="toast-group"><i class="jr-icon jr-icon-alert me-2 text-red"></i></div>
+          <div class="toast-group">
+            <h5>Something went wrong</h5>
+            <p class="mb-0" >Everybody cares about your issues please stay calm.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fade toast show border-top-middlegrey" role="alert" aria-live="assertive" aria-atomic="true" style="position: fixed; top: 150px; right: 30px; z-index: 11;">
+      <div class="toast-body">
+        <button type="button" class="btn-close" aria-label="Close" data-dismiss="toast" onClick="$('.toast').hide();"></button>
+        <div class="toast-message">
+          <div class="toast-group"><i class="jr-icon jr-icon-paperplane me-2 text-middlegrey"></i></div>
+          <div class="toast-group">
+            <h5>Some boring message</h5>
+            <p class="mb-0" >Everything is fine.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fade toast show border-top-green" role="alert" aria-live="assertive" aria-atomic="true" style="position: fixed; top: 235px; right: 30px; z-index: 11;">
+      <div class="toast-body">
+        <button type="button" class="btn-close" aria-label="Close" data-dismiss="toast" onClick="$('.toast').hide();"></button>
+        <div class="toast-message">
+          <div class="toast-group"><i class="jr-icon jr-icon-lightning me-2 text-green"></i></div>
+          <div class="toast-group">
+            <h5>Some success message</h5>
+            <p class="mb-0" >Everything becomes better.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- JR MODAL SMALL START -->
+    <div class="modal fade" id="jr-modal-small-test1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content border-top-red">
+          <div class="modal-body">
+              <div class="modal-question">
+                <div class="modal-group"><i class="jr-icon jr-icon-alert-huge text-red me-3"></i></div>
+                <div class="modal-group">
+                  <h3>Are you sure you want to delete extra long "MarketingSubList"?</h3>
+                  <p class="mb-0">A deleted form list cannot be restored.</p>
+                </div>
+              </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-danger">Delete Form </button>
+            <button type="button" class="btn" data-bs-dismiss="modal">Cancel</button>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JR MODAL SMALL END -->
+
+
+    <!-- JR MODAL BIG START -->
+    <div class="modal fade" id="jr-modal-big-test1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content border-top-darkgrey">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">Your Form seems not to exist.</h3>
+            <p class="mb-0">Enter some Form Details for Form ID.</p>
+          </div>
+          <div class="modal-body">
+
+            <form class="">
+              
+              <label for="title" class="form-label">Form ID</label>
+              <input type="text" id="title" name="title" class="form-control" value="#3456787658845678987654567" disabled> 
+              
+              <label for="title" class="form-label">Title</label>
+              <input type="text" id="title" name="title" class="form-control" value="">
+            
+              <label for="description" class="form-label">Description</label>
+              <textarea id="description" name="description" class="form-control"></textarea>
+              
+            </form>
+
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Save Form </button>
+            <button type="button" class="btn" data-bs-dismiss="modal">Cancel</button>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JR MODAL BIG END -->
+
+
+
+  </body>
+</html>

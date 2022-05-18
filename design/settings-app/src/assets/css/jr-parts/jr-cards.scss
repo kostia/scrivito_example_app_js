@@ -1,0 +1,19 @@
+ /* jr cards
+ =================================================================== */
+
+ .row.multi-row-stretch {height: calc(100% + 15px); }
+ .row.align-items-stretch .card:only-of-type { height: 100%; }
+ .card {
+  border-radius: 5px; border: none;
+  box-shadow: 0 .75rem 1.5rem $jr-box-shadow;
+ }
+ .card-header {
+  background: #fff;
+  align-items: center;
+  display: flex; flex-direction: row; 
+  padding: 15px;
+ }
+ .card-body {
+  padding: 15px;
+  hr { margin: 15px -15px; opacity: 1; background: #e3e3e3;}
+ } 
