@@ -1,0 +1,7 @@
+build
+build.zip
+buildNode
+buildPrerendered
+node_modules
+tmp
+.env
