@@ -8,6 +8,12 @@ This app is the central tool where customers can manage JustRelate apps, instanc
 - `cd jr-customer-settings`
 - `cp .env.example .env`
 - Put your development Scrivito instance ID in `.env`
+
+### In the SDK / UI repo
+- `npm run package:sdk:types`
+- `npm start`
+
+### In the settings app
 - `npm install`
 - `npm start`
 
