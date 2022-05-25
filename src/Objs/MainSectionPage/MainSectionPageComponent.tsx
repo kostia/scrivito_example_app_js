@@ -11,7 +11,7 @@ Scrivito.provideLayoutComponent(MainSectionPage, () => (
         .map((mainSectionPage) => (
           <li key={mainSectionPage.id()}>
             <Scrivito.LinkTag to={mainSectionPage}>
-              {Scrivito.isCurrentPage(mainSectionPage) && <span>&gt;</span>}
+              {Scrivito.isOnCurrentPath(mainSectionPage) && <span>&gt;</span>}
               {mainSectionPage.get("title")}({mainSectionPage.get("iconName")})
             </Scrivito.LinkTag>
           </li>
