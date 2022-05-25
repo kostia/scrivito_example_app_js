@@ -152,6 +152,9 @@ function webpackConfig(env = {}) {
       devMiddleware: {
         stats: "minimal",
       },
+      client: {
+        overlay: false,
+      },
     },
   };
 }
