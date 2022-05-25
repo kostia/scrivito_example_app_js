@@ -45,7 +45,6 @@ export default function App() {
               <Scrivito.CurrentPage />
               <NotFoundErrorPage />
             </div>
-            <Footer />
             <CurrentPageMetadata />
             <CookieConsentBanner />
             <Tracking />
