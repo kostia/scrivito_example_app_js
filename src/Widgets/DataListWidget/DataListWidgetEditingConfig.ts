@@ -12,30 +12,18 @@ Scrivito.provideEditingConfig(DataListWidget, {
       description: "Class of data to be listed",
     },
 
-    dataPage: {
-      title: "Data page",
-      description: "Page to display the data",
-    },
-
     iconName: {
       title: "Name of the icon",
     },
   },
 
-  properties: ["dataClass", "dataPage", "iconName"],
+  properties: ["dataClass", "iconName"],
 
   validations: [
     [
       "dataClass",
       (dataClass) => {
         if (!dataClass) return "Data class must be specified";
-      },
-    ],
-
-    [
-      "dataPage",
-      (dataPage) => {
-        if (!dataPage) return "Data page must be selected";
       },
     ],
   ],
