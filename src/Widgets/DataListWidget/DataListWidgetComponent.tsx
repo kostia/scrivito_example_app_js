@@ -46,9 +46,8 @@ const DataListItem = Scrivito.connect(
     );
 
     function iconClassName() {
-      return `jr-icon jr-icon-${widget
-        .obj()
-        .get("iconName")}-big me-2 d-block text-orange`;
+      const iconName = widget.get("iconName") || widget.obj().get("iconName");
+      return `jr-icon jr-icon-${iconName}-big me-2 d-block text-orange`;
     }
   }
 );

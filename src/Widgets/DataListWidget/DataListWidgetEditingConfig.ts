@@ -16,9 +16,13 @@ Scrivito.provideEditingConfig(DataListWidget, {
       title: "Data page",
       description: "Page to display the data",
     },
+
+    iconName: {
+      title: "Name of the icon",
+    },
   },
 
-  properties: ["dataClass", "dataPage"],
+  properties: ["dataClass", "dataPage", "iconName"],
 
   validations: [
     [
