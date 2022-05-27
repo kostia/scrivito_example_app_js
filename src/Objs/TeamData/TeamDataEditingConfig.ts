@@ -22,6 +22,8 @@ Scrivito.provideEditingConfig(TeamData, {
     },
   },
 
+  properties: ["name", "description"],
+
   validations: [
     [
       "name",
