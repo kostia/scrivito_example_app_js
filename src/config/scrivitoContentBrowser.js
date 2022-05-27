@@ -75,6 +75,17 @@ function defaultFilters() {
         },
         Download: filterOptionsForObjClass("Download"),
         Video: filterOptionsForObjClass("Video"),
+        Data: {
+          title: "Data",
+          icon: "database",
+          field: "_objClass",
+          value: DATA_CLASSES,
+          expanded: true,
+          options: DATA_CLASSES.reduce((result, value) => {
+            result[value] = filterOptionsForObjClass(value);
+            return result;
+          }, {}),
+        },
       },
     },
     _modification: {
@@ -116,6 +127,8 @@ const FILTER_PRESENTATIONS = {
   Redirect: { title: "Redirects", icon: "link" },
   SearchResults: { title: "Search results", icon: "lens" },
   Video: { title: "Videos", icon: "video" },
+  TeamData: { title: "Teams", icon: "users" },
+  UserData: { title: "Users", icon: "user" },
 };
 
 const PAGES = [
@@ -130,3 +143,5 @@ const PAGES = [
   "Blog",
   "SearchResults",
 ];
+
+const DATA_CLASSES = ["TeamData", "UserData"];
