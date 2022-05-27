@@ -12,9 +12,11 @@ Scrivito.provideComponent(DataListWidget, ({ widget }) => {
 
   return (
     <>
-      {DataClass.all()
+      {DataClass
+        // @ts-ignore
+        .all()
         .take()
-        .map((dataObj) => (
+        .map((dataObj: Scrivito.Obj) => (
           <Scrivito.ContentTag
             key={dataObj.id()}
             content={widget}
