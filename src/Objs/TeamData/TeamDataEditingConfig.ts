@@ -6,6 +6,10 @@ Scrivito.provideEditingConfig(TeamData, {
   title: "Team",
   description: "Represents an IAM team",
 
+  titleForContent(team) {
+    return team.get("name");
+  },
+
   attributes: {
     name: {
       title: "Name",
