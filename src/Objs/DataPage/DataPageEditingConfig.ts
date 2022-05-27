@@ -12,18 +12,35 @@ Scrivito.provideEditingConfig(DataPage, {
       description: "Class of data to be represented",
     },
 
+    title: {
+      title: "Title",
+      description: "Title to be displayed in Scrivito UI",
+    },
+
     template: {
       title: "Template",
     },
   },
 
-  properties: ["dataClass"],
+  properties: ["dataClass", "title"],
 
   validations: [
     [
       "dataClass",
       (dataClass) => {
         if (!dataClass) return "Data class must be specified";
+      },
+    ],
+
+    [
+      "title",
+      (title) => {
+        if (!title) {
+          return {
+            message: "A data page with a title is much easier to locate",
+            severity: "warning",
+          };
+        }
       },
     ],
   ],

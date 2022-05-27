@@ -4,5 +4,8 @@ import * as Scrivito from "scrivito";
 import { DataPage } from "./DataPageObjClass";
 
 Scrivito.provideComponent(DataPage, ({ page }) => (
-  <Scrivito.ContentTag content={page} attribute="template" />
+  <>
+    <div className="header-pretitle">{page.get("title")}</div>
+    <Scrivito.ContentTag content={page} attribute="template" />
+  </>
 ));
