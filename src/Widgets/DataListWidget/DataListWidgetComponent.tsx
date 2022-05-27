@@ -10,20 +10,45 @@ Scrivito.provideComponent(DataListWidget, ({ widget }) => {
   const DataClass = Scrivito.getClass(dataClass);
   if (!DataClass) return <>No “{dataClass}” data found</>;
 
+  const items = DataClass
+    // @ts-ignore
+    .all()
+    .take();
+
   return (
-    <>
-      {DataClass
-        // @ts-ignore
-        .all()
-        .take()
-        .map((dataObj: Scrivito.Obj) => (
-          <Scrivito.ContentTag
-            key={dataObj.id()}
-            content={widget}
-            attribute="template"
-            dataContext={dataObj}
-          />
-        ))}
-    </>
+    <div className="jr-list-flex separate-items">
+      {items.map((item: Scrivito.Obj) => (
+        <DataListItem widget={widget} item={item} key={item.id()} />
+      ))}
+    </div>
   );
 });
+
+const DataListItem = Scrivito.connect(
+  ({ widget, item }: { widget: Scrivito.Widget; item: Scrivito.Obj }) => {
+    return (
+      <div className="jr-list-item">
+        <div className="jr-list-group shrink">
+          <i className={iconClassName()} />
+        </div>
+
+        <Scrivito.ContentTag
+          content={widget}
+          attribute="template"
+          dataContext={item}
+          className="jr-list-group grow"
+        />
+
+        <div className="jr-list-group shrink">
+          <i className="jr-icon jr-icon-chevron-right d-block text-muted" />
+        </div>
+      </div>
+    );
+
+    function iconClassName() {
+      return `jr-icon jr-icon-${widget
+        .obj()
+        .get("iconName")}-big me-2 d-block text-orange`;
+    }
+  }
+);
