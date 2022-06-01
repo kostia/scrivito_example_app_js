@@ -14,12 +14,12 @@ Scrivito.provideComponent(DataFormWidget, ({ widget }) => {
 class DataForm {
   constructor(
     private currentId = 0,
-    private readonly map = new Map<number, OnSubmitCallback>()
+    private readonly map = new Map<number, DataFormCallbacks>()
   ) {}
 
-  register(callback: OnSubmitCallback): UnregisterCallback {
+  register(callbacks: DataFormCallbacks): UnregisterCallback {
     const id = this.getNextId();
-    this.map.set(id, callback);
+    this.map.set(id, callbacks);
 
     return () => {
       this.map.delete(id);
@@ -27,7 +27,11 @@ class DataForm {
   }
 
   submit(): void {
-    this.map.forEach((callback) => callback());
+    this.map.forEach(({ onSubmit }) => onSubmit());
+  }
+
+  clear(): void {
+    this.map.forEach(({ onCancel }) => onCancel());
   }
 
   private getNextId() {
@@ -36,10 +40,15 @@ class DataForm {
   }
 }
 
-type OnSubmitCallback = () => void;
+interface DataFormCallbacks {
+  onSubmit: DataFormCallback;
+  onCancel: DataFormCallback;
+}
+
+type DataFormCallback = () => void;
 
 interface CallbackPool {
-  [id: number]: OnSubmitCallback;
+  [id: number]: DataFormCallback;
 }
 
 type UnregisterCallback = () => void;

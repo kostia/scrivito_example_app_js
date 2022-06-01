@@ -11,9 +11,13 @@ Scrivito.provideEditingConfig(DataFormSubmitWidget, {
       description:
         "A 'dangerous' submit button wil be marked as such and will ask for confirmation once clicked.",
     },
+
+    size: {
+      title: "Button size",
+    },
   },
 
-  properties: ["title", "dangerous"],
+  properties: ["title", "dangerous", "size"],
 
   initialContent: {
     title: "Submit",

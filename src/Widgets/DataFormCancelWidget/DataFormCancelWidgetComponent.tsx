@@ -1,10 +1,10 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
 
-import { DataFormSubmitWidget } from "./DataFormSubmitWidgetClass";
+import { DataFormCancelWidget } from "./DataFormCancelWidgetClass";
 import { DataFormContext } from "../DataFormWidget/DataFormWidgetComponent";
 
-Scrivito.provideComponent(DataFormSubmitWidget, ({ widget }) => {
+Scrivito.provideComponent(DataFormCancelWidget, ({ widget }) => {
   const dataForm = React.useContext(DataFormContext);
 
   return (
@@ -15,9 +15,7 @@ Scrivito.provideComponent(DataFormSubmitWidget, ({ widget }) => {
 
   function getClassName() {
     let className = "btn";
-
     if (widget.get("size") === "small") className += " btn-sm";
-    if (widget.get("dangerous")) className += " btn-danger";
 
     return className;
   }
@@ -26,12 +24,6 @@ Scrivito.provideComponent(DataFormSubmitWidget, ({ widget }) => {
     e.preventDefault();
     e.stopPropagation();
 
-    if (dataForm) {
-      if (widget.get("dangerous")) {
-        if (window.confirm("Are you sure?")) dataForm.submit();
-      } else {
-        dataForm.submit();
-      }
-    }
+    if (dataForm) dataForm.clear();
   }
 });

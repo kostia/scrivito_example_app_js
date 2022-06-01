@@ -11,7 +11,14 @@ Scrivito.provideComponent(DataFormInputWidget, ({ widget }) => {
     null
   );
 
-  React.useEffect(() => dataForm?.register(onSubmit), [valueToBeSaved]);
+  React.useEffect(
+    () =>
+      dataForm?.register({
+        onSubmit,
+        onCancel,
+      }),
+    [valueToBeSaved]
+  );
 
   // @ts-ignore
   const dataItem = Scrivito.useDataItem();
@@ -58,5 +65,9 @@ Scrivito.provideComponent(DataFormInputWidget, ({ widget }) => {
 
       setValueToBeSaved(null);
     }
+  }
+
+  function onCancel() {
+    setValueToBeSaved(null);
   }
 });
