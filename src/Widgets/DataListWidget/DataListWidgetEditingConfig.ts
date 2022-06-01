@@ -12,13 +12,9 @@ Scrivito.provideEditingConfig(DataListWidget, {
       title: "Data class",
       description: "Class of data to be listed",
     },
-
-    iconName: {
-      title: "Name of the icon",
-    },
   },
 
-  properties: ["dataClass", "iconName"],
+  properties: ["dataClass"],
 
   validations: [
     [
