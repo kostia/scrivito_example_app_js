@@ -1,6 +1,6 @@
 import * as Scrivito from "scrivito";
 
-const IconWidget = Scrivito.provideWidgetClass("IconWidget", {
+export const FaIconWidget = Scrivito.provideWidgetClass("FaIconWidget", {
   attributes: {
     icon: "string",
     size: [
@@ -11,5 +11,3 @@ const IconWidget = Scrivito.provideWidgetClass("IconWidget", {
     link: "link",
   },
 });
-
-export default IconWidget;

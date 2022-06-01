@@ -1,10 +1,13 @@
 import * as Scrivito from "scrivito";
+
 import IconEditorTab from "../../Components/ScrivitoExtensions/IconEditorTab";
 import iconWidgetIcon from "../../assets/images/icon_widget.svg";
+import { FaIconWidget } from "./FaIconWidgetClass";
 
-Scrivito.provideEditingConfig("IconWidget", {
-  title: "Icon",
+Scrivito.provideEditingConfig(FaIconWidget, {
+  title: "Font Awesome Icon",
   thumbnail: iconWidgetIcon,
+
   attributes: {
     size: {
       title: "Size",
@@ -18,6 +21,7 @@ Scrivito.provideEditingConfig("IconWidget", {
         { value: "fa-5x", title: "500% (Biggest)" },
       ],
     },
+
     alignment: {
       title: "Alignment",
       description: "A icon list widget ignores this setting. Default: Left",
@@ -27,11 +31,13 @@ Scrivito.provideEditingConfig("IconWidget", {
         { value: "right", title: "Right" },
       ],
     },
+
     link: {
       title: "Link (optional)",
       description: "The link where this icon should lead.",
     },
   },
+
   propertiesGroups: [
     {
       title: "Icon",
@@ -44,11 +50,13 @@ Scrivito.provideEditingConfig("IconWidget", {
       key: "optional-attributes-group",
     },
   ],
+
   initialContent: {
     icon: "fa-check-square-o",
     size: "fa-1x",
     alignment: "left",
   },
+
   titleForContent: (widget) => {
     const iconText = widget.get("icon").replace(/^fa-/, "");
     if (iconText) return `Icon: ${iconText}`;

@@ -1,6 +1,6 @@
 import * as Scrivito from "scrivito";
 import iconContainerWidgetIcon from "../../assets/images/icon_container_widget.svg";
-import IconWidget from "../IconWidget/IconWidgetClass";
+import { FaIconWidget } from "../FaIconWidget/FaIconWidgetClass.ts";
 
 Scrivito.provideEditingConfig("IconContainerWidget", {
   title: "Icon List",
@@ -13,9 +13,9 @@ Scrivito.provideEditingConfig("IconContainerWidget", {
   properties: ["iconList"],
   initialContent: {
     iconList: [
-      new IconWidget({ icon: "fa-check-square-o" }),
-      new IconWidget({ icon: "fa-check-square-o" }),
-      new IconWidget({ icon: "fa-check-square-o" }),
+      new FaIconWidget({ icon: "fa-check-square-o" }),
+      new FaIconWidget({ icon: "fa-check-square-o" }),
+      new FaIconWidget({ icon: "fa-check-square-o" }),
     ],
   },
 });
