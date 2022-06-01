@@ -24,6 +24,14 @@ Scrivito.provideEditingConfig(DataListItemWidget, {
     return properties;
   },
 
+  initialContent: {
+    numberOfGroups: 3,
+
+    groupClassName1: "shrink",
+    groupClassName2: "grow",
+    groupClassName3: "shrink",
+  },
+
   validations: [
     [
       "numberOfGroups",
@@ -34,8 +42,4 @@ Scrivito.provideEditingConfig(DataListItemWidget, {
       },
     ],
   ],
-
-  initialContent: {
-    numberOfGroups: 3,
-  },
 });
