@@ -16,10 +16,6 @@ Scrivito.provideEditingConfig(DataPage, {
       title: "Title",
       description: "Title to be displayed in Scrivito UI",
     },
-
-    template: {
-      title: "Template",
-    },
   },
 
   properties: ["dataClass", "title"],
