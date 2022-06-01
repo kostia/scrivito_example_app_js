@@ -1,14 +1,27 @@
 import * as Scrivito from "scrivito";
 
-import { DataListItemWidget } from "./DataListItemWidgetClass";
+import { ListItemWidget } from "./ListItemWidgetClass";
 
-Scrivito.provideEditingConfig(DataListItemWidget, {
-  title: "Data List Item",
+const GROUP_CLASS_NAME_EDITING_CONFIG = {
+  title: "Class name",
+  description:
+    "If set to 'grow' the group will maximaze its width. If set to 'shrink', the group will minimize its width.",
+};
+
+Scrivito.provideEditingConfig(ListItemWidget, {
+  title: "List Item",
+  description: "A list item with up to 5 groups",
 
   attributes: {
     numberOfGroups: {
       title: "Number of groups",
     },
+
+    groupClassName1: GROUP_CLASS_NAME_EDITING_CONFIG,
+    groupClassName2: GROUP_CLASS_NAME_EDITING_CONFIG,
+    groupClassName3: GROUP_CLASS_NAME_EDITING_CONFIG,
+    groupClassName4: GROUP_CLASS_NAME_EDITING_CONFIG,
+    groupClassName5: GROUP_CLASS_NAME_EDITING_CONFIG,
   },
 
   properties(widget) {

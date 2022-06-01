@@ -1,9 +1,9 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
 
-import { DataListItemWidget } from "./DataListItemWidgetClass";
+import { ListItemWidget } from "./ListItemWidgetClass";
 
-Scrivito.provideComponent(DataListItemWidget, ({ widget }) => {
+Scrivito.provideComponent(ListItemWidget, ({ widget }) => {
   let numberOfGroups = widget.get("numberOfGroups");
   if (numberOfGroups <= 0) numberOfGroups = 0;
 

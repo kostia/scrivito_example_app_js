@@ -1,7 +1,7 @@
 import * as Scrivito from "scrivito";
 
 import { DataListWidget } from "./DataListWidgetClass";
-import { DataListItemWidget } from "../DataListItemWidget/DataListItemWidgetClass";
+import { ListItemWidget } from "../ListItemWidget/ListItemWidgetClass";
 import { LinkedSectionWidget } from "../LinkedSectionWidget/LinkedSectionWidgetClass";
 
 Scrivito.provideEditingConfig(DataListWidget, {
@@ -29,7 +29,7 @@ Scrivito.provideEditingConfig(DataListWidget, {
   initialContent: {
     template: [
       new LinkedSectionWidget({
-        template: [new DataListItemWidget()],
+        template: [new ListItemWidget()],
       }),
     ],
   },
