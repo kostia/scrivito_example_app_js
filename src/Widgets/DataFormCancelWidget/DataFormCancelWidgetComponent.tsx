@@ -2,13 +2,13 @@ import * as React from "react";
 import * as Scrivito from "scrivito";
 
 import { DataFormCancelWidget } from "./DataFormCancelWidgetClass";
-import { DataFormContext } from "../DataFormWidget/DataFormWidgetComponent";
+import { RESET_EVENT_TYPE } from "../DataFormWidget/DataFormWidgetComponent";
 
 Scrivito.provideComponent(DataFormCancelWidget, ({ widget }) => {
-  const dataForm = React.useContext(DataFormContext);
+  const ref = React.useRef<HTMLDivElement>();
 
   return (
-    <div className={getClassName()} onClick={onClick}>
+    <div className={getClassName()} ref={ref} onClick={onClick}>
       {widget.get("title")}
     </div>
   );
@@ -24,6 +24,8 @@ Scrivito.provideComponent(DataFormCancelWidget, ({ widget }) => {
     e.preventDefault();
     e.stopPropagation();
 
-    if (dataForm) dataForm.clear();
+    ref.current?.dispatchEvent(
+      new CustomEvent(RESET_EVENT_TYPE, { bubbles: true, cancelable: true })
+    );
   }
 });

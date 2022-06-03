@@ -2,13 +2,13 @@ import * as React from "react";
 import * as Scrivito from "scrivito";
 
 import { DataFormSubmitWidget } from "./DataFormSubmitWidgetClass";
-import { DataFormContext } from "../DataFormWidget/DataFormWidgetComponent";
+import { SUBMIT_EVENT_TYPE } from "../DataFormWidget/DataFormWidgetComponent";
 
 Scrivito.provideComponent(DataFormSubmitWidget, ({ widget }) => {
-  const dataForm = React.useContext(DataFormContext);
+  const ref = React.useRef<HTMLDivElement>();
 
   return (
-    <div className={getClassName()} onClick={onClick}>
+    <div className={getClassName()} ref={ref} onClick={onClick}>
       {widget.get("title")}
     </div>
   );
@@ -26,12 +26,16 @@ Scrivito.provideComponent(DataFormSubmitWidget, ({ widget }) => {
     e.preventDefault();
     e.stopPropagation();
 
-    if (dataForm) {
-      if (widget.get("dangerous")) {
-        if (window.confirm("Are you sure?")) dataForm.submit();
-      } else {
-        dataForm.submit();
-      }
+    if (widget.get("dangerous")) {
+      if (window.confirm("Are you sure?")) submit();
+    } else {
+      submit();
     }
+  }
+
+  function submit() {
+    ref.current?.dispatchEvent(
+      new CustomEvent(SUBMIT_EVENT_TYPE, { bubbles: true, cancelable: true })
+    );
   }
 });
