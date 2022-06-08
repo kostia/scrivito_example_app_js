@@ -6,34 +6,59 @@ import { DataFormDeleteWidget } from "./DataFormDeleteWidgetClass";
 Scrivito.provideComponent(DataFormDeleteWidget, ({ widget }) => {
   // @ts-ignore
   const dataItem = Scrivito.useDataItem();
+  const [isConfirming, setIsConfirming] = React.useState(false);
 
-  return (
-    <div className={getClassName()} onClick={onClick}>
-      {widget.get("title")}
-    </div>
-  );
+  if (isConfirming) {
+    return (
+      <>
+        <div className={getCancelClassName()} onClick={onCancel}>
+          {widget.get("cancelTitle")}
+        </div>
+        <div className={getDeleteClassName()} onClick={onConfirm}>
+          {widget.get("confirmTitle")}
+        </div>
+      </>
+    );
+  } else {
+    return (
+      <div className={getDeleteClassName()} onClick={onDelete}>
+        {widget.get("title")}
+      </div>
+    );
+  }
 
-  function getClassName() {
-    let className = "btn";
-
+  function getDeleteClassName() {
+    let className = "btn btn-danger";
     if (widget.get("size") === "small") className += " btn-sm";
-    if (widget.get("dangerous")) className += " btn-danger";
 
     return className;
   }
 
-  function onClick(e: React.MouseEvent) {
+  function getCancelClassName() {
+    let className = "btn";
+    if (widget.get("size") === "small") className += " btn-sm";
+
+    return className;
+  }
+
+  function onDelete(e: React.MouseEvent) {
     e.preventDefault();
     e.stopPropagation();
 
-    if (widget.get("dangerous")) {
-      if (window.confirm("Are you sure?")) deleteDataItem();
-    } else {
-      deleteDataItem();
-    }
+    setIsConfirming(true);
   }
 
-  function deleteDataItem() {
+  function onCancel(e: React.MouseEvent) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    setIsConfirming(false);
+  }
+
+  function onConfirm(e: React.MouseEvent) {
+    e.preventDefault();
+    e.stopPropagation();
+
     dataItem?.obj().destroy();
   }
 });

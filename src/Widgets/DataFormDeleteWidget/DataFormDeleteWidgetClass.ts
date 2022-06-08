@@ -5,7 +5,8 @@ export const DataFormDeleteWidget = Scrivito.provideWidgetClass(
   {
     attributes: {
       title: "string",
-      dangerous: "boolean",
+      confirmTitle: "string",
+      cancelTitle: "string",
       size: ["enum", { values: ["small"] }],
     },
   }
