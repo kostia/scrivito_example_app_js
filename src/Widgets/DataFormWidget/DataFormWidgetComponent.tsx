@@ -3,14 +3,22 @@ import * as Scrivito from "scrivito";
 
 import { DataFormWidget } from "./DataFormWidgetClass";
 
+export const DataFormContext = React.createContext<{
+  isEditing: boolean;
+  setIsEditing: (nextIsEditing: boolean) => void;
+}>(null);
+
 Scrivito.provideComponent(DataFormWidget, ({ widget }) => {
   // @ts-ignore
   const dataItem = Scrivito.useDataItem();
   const formRef = React.useRef<HTMLFormElement>();
+  const [isEditing, setIsEditing] = React.useState(false);
 
   return (
     <form ref={formRef} onSubmit={onSubmit}>
-      <Scrivito.ContentTag content={widget} attribute="template" />
+      <DataFormContext.Provider value={{ isEditing, setIsEditing }}>
+        <Scrivito.ContentTag content={widget} attribute="template" />
+      </DataFormContext.Provider>
     </form>
   );
 

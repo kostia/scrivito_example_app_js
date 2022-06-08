@@ -2,11 +2,14 @@ import * as React from "react";
 import * as Scrivito from "scrivito";
 
 import { DataFormDeleteWidget } from "./DataFormDeleteWidgetClass";
+import { DataFormContext } from "../DataFormWidget/DataFormWidgetComponent";
 
 Scrivito.provideComponent(DataFormDeleteWidget, ({ widget }) => {
   // @ts-ignore
   const dataItem = Scrivito.useDataItem();
   const [isConfirming, setIsConfirming] = React.useState(false);
+  const { isEditing } = React.useContext(DataFormContext);
+  if (!isEditing) return null;
 
   if (isConfirming) {
     return (

@@ -2,11 +2,13 @@ import * as React from "react";
 import * as Scrivito from "scrivito";
 
 import { DataFormInputWidget } from "./DataFormInputWidgetClass";
+import { DataFormContext } from "../DataFormWidget/DataFormWidgetComponent";
 
 Scrivito.provideComponent(DataFormInputWidget, ({ widget }) => {
   // @ts-ignore
   const dataItem = Scrivito.useDataItem();
   const [value, setValue] = React.useState<string | null>(null);
+  const { isEditing, setIsEditing } = React.useContext(DataFormContext);
 
   return (
     <div className="input-group input-group-btn-inside">
@@ -16,8 +18,11 @@ Scrivito.provideComponent(DataFormInputWidget, ({ widget }) => {
         defaultValue={getDefaultValue()}
         className={getClassName()}
         placeholder={widget.get("placeholder")}
-        disabled={widget.get("disabled")}
+        disabled={isDisabled()}
       />
+      <button type="button" className="btn btn-addon" onClick={onToggle}>
+        <i className={getIconClassName()} />
+      </button>
     </div>
   );
 
@@ -32,8 +37,26 @@ Scrivito.provideComponent(DataFormInputWidget, ({ widget }) => {
 
   function getClassName() {
     let className = "form-control";
-    if (widget.get("disabled")) className += " form-control-readonly";
+    if (isDisabled()) className += " form-control-readonly";
 
     return className;
+  }
+
+  function getIconClassName() {
+    let className = "jr-icon jr-icon-pen";
+    if (isEditing) className += " text-orange";
+
+    return className;
+  }
+
+  function isDisabled() {
+    return widget.get("disabled") || !isEditing;
+  }
+
+  function onToggle(e: React.MouseEvent) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    setIsEditing(!isEditing);
   }
 });
