@@ -3,41 +3,19 @@ import * as Scrivito from "scrivito";
 
 import { DataFormWidget } from "./DataFormWidgetClass";
 
-export const SUBMIT_EVENT_TYPE = "submitDataForm";
-export const RESET_EVENT_TYPE = "resetDataForm";
-
 Scrivito.provideComponent(DataFormWidget, ({ widget }) => {
   // @ts-ignore
   const dataItem = Scrivito.useDataItem();
-
   const formRef = React.useRef<HTMLFormElement>();
-  const onSubmitCallback = React.useCallback(onSubmit, []);
-  const onResetCallback = React.useCallback(onReset, []);
-
-  React.useEffect(() => {
-    const form = formRef.current;
-    if (!form) return;
-
-    form.addEventListener(SUBMIT_EVENT_TYPE, onSubmitCallback);
-    form.addEventListener(RESET_EVENT_TYPE, onResetCallback);
-
-    return () => {
-      const form = formRef.current;
-
-      if (form) {
-        form.removeEventListener(SUBMIT_EVENT_TYPE, onSubmitCallback);
-        form.removeEventListener(RESET_EVENT_TYPE, onResetCallback);
-      }
-    };
-  }, [onSubmitCallback, onResetCallback]);
 
   return (
-    <form ref={formRef}>
+    <form ref={formRef} onSubmit={onSubmit}>
       <Scrivito.ContentTag content={widget} attribute="template" />
     </form>
   );
 
-  function onSubmit(e: CustomEvent) {
+  function onSubmit(e: React.FormEvent) {
+    e.preventDefault();
     e.stopPropagation();
 
     const obj = dataItem?.obj();
@@ -57,10 +35,5 @@ Scrivito.provideComponent(DataFormWidget, ({ widget }) => {
 
       obj.update(nextAttributes);
     }
-  }
-
-  function onReset(e: CustomEvent) {
-    e.stopPropagation();
-    formRef?.current?.reset();
   }
 });

@@ -1,7 +1,7 @@
 import * as Scrivito from "scrivito";
 
-export const DataFormCancelWidget = Scrivito.provideWidgetClass(
-  "DataFormCancelWidget",
+export const DataFormResetWidget = Scrivito.provideWidgetClass(
+  "DataFormResetWidget",
   {
     attributes: {
       title: "string",

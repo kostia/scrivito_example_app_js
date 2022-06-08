@@ -1,11 +1,11 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
 
-import { DataFormSubmitWidget } from "./DataFormSubmitWidgetClass";
+import { DataFormResetWidget } from "./DataFormResetWidgetClass";
 
-Scrivito.provideComponent(DataFormSubmitWidget, ({ widget }) => {
+Scrivito.provideComponent(DataFormResetWidget, ({ widget }) => {
   return (
-    <button type="submit" className={getClassName()}>
+    <button type="reset" className={getClassName()}>
       {widget.get("title")}
     </button>
   );

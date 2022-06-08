@@ -5,7 +5,6 @@ export const DataFormSubmitWidget = Scrivito.provideWidgetClass(
   {
     attributes: {
       title: "string",
-      dangerous: "boolean",
       size: ["enum", { values: ["small"] }],
     },
   }

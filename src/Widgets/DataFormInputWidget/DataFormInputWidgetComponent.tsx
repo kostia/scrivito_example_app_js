@@ -4,10 +4,9 @@ import * as Scrivito from "scrivito";
 import { DataFormInputWidget } from "./DataFormInputWidgetClass";
 
 Scrivito.provideComponent(DataFormInputWidget, ({ widget }) => {
-  const [value, setValue] = React.useState<string | null>(null);
-
   // @ts-ignore
   const dataItem = Scrivito.useDataItem();
+  const [value, setValue] = React.useState<string | null>(null);
 
   return (
     <div className="input-group input-group-btn-inside">

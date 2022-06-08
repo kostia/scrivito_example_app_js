@@ -1,9 +1,9 @@
 import * as Scrivito from "scrivito";
 
-import { DataFormCancelWidget } from "./DataFormCancelWidgetClass";
+import { DataFormResetWidget } from "./DataFormResetWidgetClass";
 
-Scrivito.provideEditingConfig(DataFormCancelWidget, {
-  title: "Data Form Cancel",
+Scrivito.provideEditingConfig(DataFormResetWidget, {
+  title: "Data Form Reset Button",
 
   attributes: {
     size: {
@@ -14,7 +14,7 @@ Scrivito.provideEditingConfig(DataFormCancelWidget, {
   properties: ["title", "size"],
 
   initialContent: {
-    title: "Cancel",
+    title: "Reset",
   },
 
   validations: [
