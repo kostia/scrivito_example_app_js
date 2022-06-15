@@ -2,16 +2,20 @@ import * as React from "react";
 import * as Scrivito from "scrivito";
 
 import { DataFormSubmitWidget } from "./DataFormSubmitWidgetClass";
-import { DataFormContext } from "../DataFormWidget/DataFormWidgetComponent";
 
 Scrivito.provideComponent(DataFormSubmitWidget, ({ widget }) => {
-  const { isEditing } = React.useContext(DataFormContext);
-  if (!isEditing) return null;
-
   return (
-    <button type="submit" className={getClassName()}>
-      {widget.get("title")}
-    </button>
+    <>
+      <button type="submit" className={getClassName()}>
+        {widget.get("submitTitle")}
+      </button>
+
+      {widget.get("hasReset") && (
+        <button type="reset" className={getClassName()}>
+          {widget.get("resetTitle")}
+        </button>
+      )}
+    </>
   );
 
   function getClassName() {
