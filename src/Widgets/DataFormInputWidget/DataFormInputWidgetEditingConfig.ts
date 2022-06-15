@@ -10,6 +10,10 @@ Scrivito.provideEditingConfig(DataFormInputWidget, {
       title: "Name of the data attribute in question",
     },
 
+    title: {
+      title: "Input title",
+    },
+
     type: {
       title: "Type of the input",
     },
@@ -22,13 +26,28 @@ Scrivito.provideEditingConfig(DataFormInputWidget, {
       title: "Is disabled?",
       description: "Determines if the input should be disabled.",
     },
+
+    hideLabel: {
+      title: "Hide the input label?",
+    },
   },
 
-  properties: ["attribute", "type", "placeholder", "disabled"],
+  properties(widget) {
+    const properties = ["type", "placeholder", "disabled", "hideLabel"];
+
+    if (!widget.get("hideLabel")) {
+      properties.unshift("title");
+    }
+
+    properties.unshift("attribute");
+
+    return properties;
+  },
 
   initialContent: {
     type: "text",
     disabled: false,
+    hideLabel: false,
   },
 
   validations: [

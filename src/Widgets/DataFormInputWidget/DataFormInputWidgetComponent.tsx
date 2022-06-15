@@ -11,18 +11,22 @@ Scrivito.provideComponent(DataFormInputWidget, ({ widget }) => {
   const { isEditing, setIsEditing } = React.useContext(DataFormContext);
 
   return (
-    <div className="input-group input-group-btn-inside">
-      <input
-        name={getAttributeName()}
-        type={widget.get("type")}
-        defaultValue={getDefaultValue()}
-        className={getClassName()}
-        placeholder={widget.get("placeholder")}
-        disabled={isDisabled()}
-      />
-      <button type="button" className="btn btn-addon" onClick={onToggle}>
-        <i className={getIconClassName()} />
-      </button>
+    <div className="col-md-8">
+      <Label widget={widget} />
+      <div className="input-group input-group-btn-inside">
+        <input
+          name={getAttributeName()}
+          type={widget.get("type")}
+          defaultValue={getDefaultValue()}
+          id={getAttributeName()}
+          className={getClassName()}
+          placeholder={widget.get("placeholder")}
+          disabled={isDisabled()}
+        />
+        <button type="button" className="btn btn-addon" onClick={onToggle}>
+          <i className={getIconClassName()} />
+        </button>
+      </div>
     </div>
   );
 
@@ -59,4 +63,14 @@ Scrivito.provideComponent(DataFormInputWidget, ({ widget }) => {
 
     setIsEditing(!isEditing);
   }
+});
+
+const Label = Scrivito.connect(({ widget }: { widget: Scrivito.Widget }) => {
+  if (widget.get("hideLabel")) return null;
+
+  return (
+    <label htmlFor={widget.get("attribute") as string} className="form-label">
+      <span>{widget.get("title")}</span>
+    </label>
+  );
 });

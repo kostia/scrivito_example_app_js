@@ -5,6 +5,7 @@ export const DataFormInputWidget = Scrivito.provideWidgetClass(
   {
     attributes: {
       attribute: "string",
+      title: "string",
       type: [
         "enum",
         {
@@ -17,6 +18,7 @@ export const DataFormInputWidget = Scrivito.provideWidgetClass(
 
       placeholder: "string",
       disabled: "boolean",
+      hideLabel: "boolean",
     },
   }
 );

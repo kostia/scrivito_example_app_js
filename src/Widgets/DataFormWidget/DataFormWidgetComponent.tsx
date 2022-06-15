@@ -15,7 +15,7 @@ Scrivito.provideComponent(DataFormWidget, ({ widget }) => {
   const [isEditing, setIsEditing] = React.useState(false);
 
   return (
-    <form ref={formRef} onSubmit={onSubmit}>
+    <form ref={formRef} onSubmit={onSubmit} className="row">
       <DataFormContext.Provider value={{ isEditing, setIsEditing }}>
         <Scrivito.ContentTag content={widget} attribute="template" />
       </DataFormContext.Provider>
