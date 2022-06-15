@@ -3,7 +3,7 @@ import * as Scrivito from "scrivito";
 import { DataFormDeleteWidget } from "./DataFormDeleteWidgetClass";
 
 Scrivito.provideEditingConfig(DataFormDeleteWidget, {
-  title: "Data Form Delete Button",
+  title: "Data Form Delete",
 
   attributes: {
     size: {

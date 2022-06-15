@@ -3,7 +3,7 @@ import * as Scrivito from "scrivito";
 import { DataFormSubmitWidget } from "./DataFormSubmitWidgetClass";
 
 Scrivito.provideEditingConfig(DataFormSubmitWidget, {
-  title: "Data Form Submit Buttons",
+  title: "Data Form Submit",
 
   attributes: {
     submitTitle: {
