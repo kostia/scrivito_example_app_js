@@ -12,7 +12,9 @@ Scrivito.provideComponent(DataFormWidget, ({ widget }) => {
   // @ts-ignore
   const dataItem = Scrivito.useDataItem();
   const formRef = React.useRef<HTMLFormElement>();
-  const [isEditing, setIsEditing] = React.useState(false);
+  const [isEditing, setIsEditing] = React.useState(
+    Scrivito.isInPlaceEditingActive()
+  );
 
   return (
     <form ref={formRef} onSubmit={onSubmit} className="row">
