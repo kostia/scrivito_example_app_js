@@ -12,6 +12,7 @@ export const DataFormInputWidget = Scrivito.provideWidgetClass(
           values: [
             // More to come...
             "text",
+            "textarea",
           ],
         },
       ],

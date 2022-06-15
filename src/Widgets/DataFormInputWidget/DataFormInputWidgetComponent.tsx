@@ -10,19 +10,32 @@ Scrivito.provideComponent(DataFormInputWidget, ({ widget }) => {
   const [value, setValue] = React.useState<string | null>(null);
   const { isEditing, setIsEditing } = React.useContext(DataFormContext);
 
+  const attributeName = getAttributeName();
+
   return (
     <div className="col-md-8">
       <Label widget={widget} />
       <div className="input-group input-group-btn-inside">
-        <input
-          name={getAttributeName()}
-          type={widget.get("type")}
-          defaultValue={getDefaultValue()}
-          id={getAttributeName()}
-          className={getClassName()}
-          placeholder={widget.get("placeholder")}
-          disabled={isDisabled()}
-        />
+        {widget.get("type") === "textarea" ? (
+          <textarea
+            name={attributeName}
+            defaultValue={getDefaultValue()}
+            id={attributeName}
+            className={getClassName()}
+            placeholder={widget.get("placeholder")}
+            disabled={isDisabled()}
+          />
+        ) : (
+          <input
+            name={attributeName}
+            type={widget.get("type")}
+            defaultValue={getDefaultValue()}
+            id={attributeName}
+            className={getClassName()}
+            placeholder={widget.get("placeholder")}
+            disabled={isDisabled()}
+          />
+        )}
         <button type="button" className="btn btn-addon" onClick={onToggle}>
           <i className={getIconClassName()} />
         </button>
