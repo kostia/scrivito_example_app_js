@@ -19,7 +19,7 @@ Scrivito.provideEditingConfig("TextWidget", {
       description: "The actual source code of this text",
     },
   },
-  properties: ["alignment", "text"],
+  properties: ["myDataLocator", "alignment", "text"],
   initialContent: {
     alignment: "left",
   },
