@@ -106,5 +106,13 @@ Scrivito.provideEditingConfig("Homepage", {
         }
       },
     ],
+    [
+      "_permalink",
+      (permalink) => {
+        if (!permalink) {
+          return "Permalink must be set";
+        }
+      },
+    ],
   ],
 });
