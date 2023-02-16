@@ -5,6 +5,35 @@ import { WrapIfClassName } from "../../Components/WrapIfClassName";
 import { alignmentClassName } from "../../utils/alignmentClassName";
 
 Scrivito.provideComponent("ButtonWidget", ({ widget }) => {
+  return (
+    <div>
+      {Scrivito.isUserLoggedIn() ? (
+        <span>
+          Im logged in.
+          <button
+            className="btn-primary"
+            onClick={() => {
+              Scrivito.logout();
+            }}
+          >
+            Log me out
+          </button>
+        </span>
+      ) : (
+        <span>
+          Im not logged in.{" "}
+          <button
+            className="btn-primary"
+            onClick={() => {
+              Scrivito.ensureUserIsLoggedIn();
+            }}
+          >
+            Log me in
+          </button>
+        </span>
+      )}
+    </div>
+  );
   const target = widget.get("target");
   let text = target && target.title();
   if (!text) {

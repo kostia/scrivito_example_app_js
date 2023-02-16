@@ -7,6 +7,7 @@ export function configureScrivito(options) {
     strictSearchOperators: true,
     contentTagsForEmptyAttributes: false,
     tenant: process.env.SCRIVITO_TENANT,
+    jrRestApiEndpoint: "http://localhost:8080/jr-api",
     unstable: {
       assetUrlBase: "http://localhost:8091",
       trustedUiOrigins: [
