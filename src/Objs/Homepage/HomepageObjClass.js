@@ -4,6 +4,7 @@ import { metadataAttributes } from "../_metadataAttributes";
 
 export const Homepage = Scrivito.provideObjClass("Homepage", {
   attributes: {
+    myDatalocator: 'datalocator',
     ...defaultPageAttributes,
     showAsLandingPage: "boolean",
     cookieConsentLink: "link",
