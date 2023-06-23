@@ -69,6 +69,9 @@ Scrivito.provideEditingConfig("Homepage", {
       description:
         'If you set this link, a cookie consent box will be shown on every page. To preview the effect of this setting, please enable third-party cookies in your browser. The link title defaults to "Learn more »".',
     },
+    myDatalocator: {
+      title: "Listed data",
+    },
   },
   properties: (obj) => [
     "myDatalocator",
